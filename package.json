@@ -9,6 +9,11 @@
         "backend": "node backend/server.js",
         "install-all": "npm install --prefix frontend && npm install --prefix backend"
     },
+    "dependencies": {
+        "next": "16.1.6",
+        "react": "19.2.3",
+        "react-dom": "19.2.3"
+    },
     "devDependencies": {
         "concurrently": "^8.2.2"
     }
