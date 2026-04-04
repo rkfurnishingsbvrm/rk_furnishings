@@ -1,0 +1,27 @@
+{
+  "consultations_service": {
+    "count": 1,
+    "data": [
+      {
+        "id": "f49219e3-9551-4f93-b592-88d78bdddbcb",
+        "user_name": "Test User",
+        "status": "pending",
+        "created_at": "2026-03-09T17:10:24.985945+00:00"
+      }
+    ]
+  },
+  "consultations_anon": {
+    "count": 0
+  },
+  "products_anon": {
+    "count": 3
+  },
+  "insert_product_anon": {
+    "success": false,
+    "error": "new row violates row-level security policy for table \"products\""
+  },
+  "insert_blog_anon": {
+    "success": false,
+    "error": "new row violates row-level security policy for table \"blog_posts\""
+  }
+}

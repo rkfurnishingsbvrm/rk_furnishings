@@ -1,0 +1,14 @@
+[
+  {
+    "id": "consult-1775127943150",
+    "user_name": "Test User",
+    "phone": "9999999999",
+    "email": "test@example.com",
+    "service_type": "Home Styling Consultation",
+    "product_interest": "Curtains & Drapes",
+    "preferred_date": "2026-04-02",
+    "message": null,
+    "status": "confirmed",
+    "created_at": "2026-04-02T11:05:43.150Z"
+  }
+]
