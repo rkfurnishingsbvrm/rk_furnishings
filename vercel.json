@@ -1,5 +1,6 @@
 {
-  "buildCommand": "if [ -d \"frontend\" ]; then npm install --prefix frontend --legacy-peer-deps && npm run build --prefix frontend; else npm install --legacy-peer-deps && npm run build; fi",
-  "outputDirectory": "frontend/.next",
-  "framework": "nextjs"
+  "version": 2,
+  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "installCommand": "npm install --legacy-peer-deps"
 }

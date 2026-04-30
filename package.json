@@ -1,20 +1,56 @@
 {
-    "name": "rk-furnishings",
-    "version": "1.0.0",
-    "scripts": {
-        "build": "npm run build --prefix frontend",
-        "start": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
-        "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
-        "seed": "node backend/seed.js",
-        "backend": "node backend/server.js",
-        "install-all": "npm install --prefix frontend && npm install --prefix backend"
-    },
-    "dependencies": {
-        "next": "16.1.6",
-        "react": "19.2.3",
-        "react-dom": "19.2.3"
-    },
-    "devDependencies": {
-        "concurrently": "^8.2.2"
-    }
+  "name": "rk-furnishings",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next dev --turbo\" \"node backend/server.js\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "backend": "node backend/server.js",
+    "seed": "node backend/seed.js",
+    "install-backend": "npm install --prefix backend"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@google/model-viewer": "^4.2.0",
+    "@react-three/cannon": "^6.6.0",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "@supabase/supabase-js": "^2.98.0",
+    "@types/three": "^0.183.1",
+    "bcryptjs": "^3.0.3",
+    "cannon-es": "^0.20.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "fabric": "^7.2.0",
+    "framer-motion": "^12.36.0",
+    "gsap": "^3.14.2",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^0.577.0",
+    "mongoose": "^9.2.4",
+    "next": "16.1.6",
+    "postprocessing": "^6.39.0",
+    "query-string": "^9.3.1",
+    "react": "19.2.3",
+    "react-compare-slider": "^4.0.0",
+    "react-dom": "19.2.3",
+    "three": "^0.183.2",
+    "units": "^5.3.0",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^8.2.2",
+    "cross-env": "^10.1.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
 }
