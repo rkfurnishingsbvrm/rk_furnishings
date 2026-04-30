@@ -11,6 +11,7 @@ const AdminSidebar = ({ onLogout }: { onLogout: () => void }) => {
         { href: "/admin/products", label: "Product Catalogue" },
         { href: "/admin/blog", label: "Blog Editor" },
         { href: "/admin/consultations", label: "Consultations" },
+        { href: "/admin/orders", label: "Customer Orders" },
         { href: "/admin/settings", label: "Settings" },
     ];
 

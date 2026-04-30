@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Playfair_Display, Montserrat } from 'next/font/google';
 import './globals.css';
 import CustomCursor from '@/components/CustomCursor';
+import GlobalOverlay from '@/components/GlobalOverlay';
+import Script from 'next/script';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -25,9 +27,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="cursor-none">
+    <html lang="en" className="cursor-none" suppressHydrationWarning>
       <head>
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+        <Script 
+          src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js" 
+          type="module" 
+          strategy="afterInteractive" 
+        />
       </head>
 
       <body
@@ -35,6 +41,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <CustomCursor />
+        <GlobalOverlay />
         {children}
       </body>
     </html>

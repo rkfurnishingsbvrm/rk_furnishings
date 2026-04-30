@@ -1,36 +1,65 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-export async function analyzeRoom(imageFile: File) {
+// Standard Product Catalog (Excluding Curtains) for AI context
+const PRODUCT_CATALOG = [
+    { id: "local-seed-0", name: "Premium Damask Wallpaper - Gold", materials: "Vinyl", colors: ["Gold", "Cream"], style: "Royal", category: "Wallpapers" },
+    { id: "local-seed-1", name: "Modern Velvet Sofa Fabric - Navy", materials: "Velvet", colors: ["Navy", "Charcoal"], style: "Modern", category: "Sofa Fabrics" },
+    { id: "local-seed-2", name: "Textured Linen Wallpaper - Grey", materials: "Linen", colors: ["Grey", "White"], style: "Minimalist", category: "Wallpapers" },
+    { id: "local-seed-3", name: "Royal Jacquard Sofa Fabric - Maroon", materials: "Jacquard", colors: ["Maroon", "Gold"], style: "Royal", category: "Sofa Fabrics" },
+    { id: "local-seed-4", name: "Contemporary Floral Wallpaper", materials: "Paper", colors: ["Pastel Blue", "Cream"], style: "Contemporary", category: "Wallpapers" },
+    { id: "local-seed-5", name: "Elite Suede Sofa Fabric - Charcoal", materials: "Suede", colors: ["Charcoal", "Black"], style: "Elite", category: "Sofa Fabrics" },
+    { id: "local-seed-6", name: "Minimalist Geometric Wallpaper", materials: "Non-woven", colors: ["White", "Black"], style: "Minimalist", category: "Wallpapers" },
+    { id: "local-seed-7", name: "Classic Chenille Sofa Fabric", materials: "Chenille", colors: ["Beige", "Brown"], style: "Classic", category: "Sofa Fabrics" },
+    { id: "local-seed-8", name: "Artisanal Silk Wallpaper - Emerald", materials: "Silk", colors: ["Emerald", "Gold"], style: "Artisanal", category: "Wallpapers" },
+    { id: "local-seed-9", name: "Modern Leatherette Sofa Fabric", materials: "Leatherette", colors: ["Tan", "Navy"], style: "Modern", category: "Sofa Fabrics" }
+];
+
+export interface AIDesignRecommendation {
+    id: string;
+    name: string;
+    category: string;
+    matchPercentage: number;
+    tag: string;
+    reason: string;
+    modelUrl: string;
+    displayPoster?: string;
+}
+
+export interface RoomAnalysis {
+    style: string;
+    colors: string[];
+    windowInfo: {
+        location: string;
+        suggestedType: string;
+        suggestedLength: string;
+    };
+    recommendations: AIDesignRecommendation[];
+    layout: string;
+}
+
+export async function analyzeRoom(imageFile: File): Promise<RoomAnalysis> {
     const key = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
     
-    // Dynamic Product Pool for high-fidelity variety
-    const styles = ['Royal', 'Bespoke', 'Modern', 'Minimalist', 'Artisanal', 'Classic', 'Luxury', 'Contemporary'];
-    const materials = ['Velvet', 'Silk', 'Linen', 'Jacquard', 'Damask', 'Polyester'];
-    const wallpapers = ['Damask', 'Floral', 'Geometric', 'Textured', 'Metallic', 'Abstract'];
-    
-    const pick = (arr: any[]) => arr[Math.floor(Math.random() * arr.length)];
-
     if (!key) {
         console.warn("API Key missing. Activating Autonomous Smart Fallback...");
-        const style1 = pick(styles);
-        const style2 = pick(styles);
+        const randomItems = Array.from({length: 2}, () => PRODUCT_CATALOG[Math.floor(Math.random() * PRODUCT_CATALOG.length)]);
         return {
-            style: `${style1} Contemporary`,
+            style: "Modern Elite",
             colors: ["#7FB3D5", "#FDFEFE", "#1B2631"],
-            recommendations: [
-                {
-                    name: `${style1} ${pick(materials)} Drapes - Series ${Math.floor(Math.random() * 20) + 1}`,
-                    category: "Curtains",
-                    reason: `The premium ${pick(materials).toLowerCase()} texture is selected to enhance the analyzed spatial volume.`,
-                    modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb"
-                },
-                {
-                    name: `${style2} ${pick(wallpapers)} Wallpaper - Design ${Math.floor(Math.random() * 20) + 1}`,
-                    category: "Wallpapers",
-                    reason: "A structural pattern designed to provide depth to your specific wall dimensions.",
-                    modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb"
-                }
-            ],
+            windowInfo: {
+                location: "Center Wall",
+                suggestedType: "Neutral Tone Wallpaper",
+                suggestedLength: "Tailored to wall"
+            },
+            recommendations: randomItems.map(item => ({
+                id: item.id,
+                name: item.name,
+                category: item.category || "Wallpapers",
+                matchPercentage: Math.floor(Math.random() * 15) + 85,
+                tag: "Recommended for your room",
+                reason: `The ${item.materials.toLowerCase()} material and ${(item.colors || [])[0]?.toLowerCase() || 'neutral'} tones perfectly complement your wall colors and furniture layout.`,
+                modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb"
+            })),
             layout: "Dynamic spatial optimization recommended."
         };
     }
@@ -38,28 +67,39 @@ export async function analyzeRoom(imageFile: File) {
     const genAI = new GoogleGenerativeAI(key);
     const imageData = await fileToGenerativePart(imageFile);
     
-    const prompt = `Analyze this room image for interior design. 
-    1. Identify the style and dominant color palette.
-    2. Recommend exactly 2 UNIQUE and DIFFERENT Curtain products from RK Furnishings.
+    const prompt = `Analyze this room image for interior design specifically for RK Furnishings products (Wallpapers, Sofa Fabrics). 
     
-    INVENTORY CONTEXT:
-    Our Curtain products follow this strict naming pattern:
-    - Name: "[Style] [Material] Drapes - Series [N]"
-    - Styles: Royal, Modern, Minimalist, Classic, Artisanal, Luxury, Vintage, Contemporary, Elite, Bespoke.
-    - Materials: Velvet, Silk, Linen, Jacquard, Cotton Blend, Suede, Damask, Polyester.
+    1. Identify the room style (Modern, Traditional, Minimalist, Luxury).
+    2. Detect dominant colors (Wall, Floor, Furniture).
+    3. Locate walls and furniture to suggest appropriate textures and patterns.
+    4. Recommend exactly 2 products ONLY from the following RK Furnishings Catalog:
     
-    MATCHING LOGIC:
-    Pick 2 different Series (e.g. Series 5 and Series 12) that best match the Color Palette and Style of the uploaded room.
+    CATALOG:
+    ${JSON.stringify(PRODUCT_CATALOG, null, 2)}
+    
+    RULES:
+    - Restrict recommendations ONLY to the provided catalog.
+    - For each recommendation, provide a "matchPercentage" (80-99%) based on how well it fits.
+    - Add a "tag" field: usually "Recommended for your room" or "Best Value Match".
+    - Provide a specific "reason" why it matches.
     
     Return ONLY valid JSON in this structure: 
     { 
         "style": "string", 
         "colors": ["string"], 
+        "windowInfo": {
+            "location": "string",
+            "suggestedType": "string",
+            "suggestedLength": "string"
+        },
         "recommendations": [
             { 
+               "id": "string",
                "name": "string", 
-               "category": "Curtains", 
-               "reason": "string", 
+               "category": "string", 
+               "matchPercentage": number,
+               "tag": "string",
+               "reason": "string",
                "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb" 
             }
         ], 
@@ -76,33 +116,30 @@ export async function analyzeRoom(imageFile: File) {
     try {
         let text;
         try {
-            // Attempt 1: Gemini 1.5 Flash (Most efficient for spatial images)
             text = await tryModel("gemini-1.5-flash", "v1beta");
-        } catch (e1) {
+        } catch (_) {
             try {
-                // Attempt 2: Gemini Pro Vision (Legacy fallback)
                 text = await tryModel("gemini-pro-vision", "v1");
-            } catch (e2) {
+            } catch (__) {
                 console.warn("Real API failed. Activating Dynamic Fallback Engine...");
-                const s1 = pick(styles);
-                const s2 = pick(styles);
+                const fallbackItems = Array.from({length: 2}, () => PRODUCT_CATALOG[Math.floor(Math.random() * PRODUCT_CATALOG.length)]);
                 return {
-                    style: `${s1} Heritage`,
+                    style: "Bespoke Contemporary",
                     colors: ["#A93226", "#F4D03F", "#1A5276"],
-                    recommendations: [
-                        {
-                            name: `${s1} ${pick(materials)} Drapes - Series ${Math.floor(Math.random() * 20) + 1}`,
-                            category: "Curtains",
-                            reason: "Strategically selected to compliment the natural light detected in the frame.",
-                            modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb"
-                        },
-                        {
-                            name: `${s2} ${pick(wallpapers)} Wallpaper - Design ${Math.floor(Math.random() * 20) + 1}`,
-                            category: "Wallpapers",
-                            reason: "A bespoke wall texture recommended to enhance the room's formal geometry.",
-                            modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb"
-                        }
-                    ],
+                    windowInfo: {
+                        location: "Side Wall",
+                        suggestedType: "Textured Finish",
+                        suggestedLength: "Full Height"
+                    },
+                    recommendations: fallbackItems.map(item => ({
+                        id: item.id,
+                        name: item.name,
+                        category: item.category || "Wallpapers",
+                        matchPercentage: 92,
+                        tag: "Style Match",
+                        reason: "Strategically selected to compliment the natural light detected in the frame.",
+                        modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb"
+                    })),
                     layout: "Custom spatial mapping based on room detection."
                 };
             }
@@ -110,9 +147,20 @@ export async function analyzeRoom(imageFile: File) {
 
         if (!text) throw new Error("Empty AI response");
         const cleanText = text.replace(/```json|```/g, '').trim();
-        return JSON.parse(cleanText);
+        const parsed: RoomAnalysis = JSON.parse(cleanText);
+        
+        // Use dynamic posters based on category
+        parsed.recommendations = parsed.recommendations.map((rec) => {
+            const isWallpaper = rec.category === 'Wallpapers';
+            return {
+                ...rec,
+                displayPoster: isWallpaper ? '/images/wallpaper.png' : '/images/sofa.png'
+            };
+        });
 
-    } catch (error: any) {
+        return parsed;
+
+    } catch (error) {
         console.error("AI Analysis Final Error:", error);
         throw error;
     }
@@ -128,3 +176,4 @@ async function fileToGenerativePart(file: File) {
         inlineData: { data: await base64EncodedDataPromise as string, mimeType: file.type },
     };
 }
+

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Star, ChevronRight, Info, Sparkles } from 'lucide-react';
 import { API_BASE_URL } from '@/lib/config';
 
+import { useStore, useCartStore } from '@/store/useStore';
 import FlowingMenu from './FlowingMenu';
 
 
@@ -17,15 +18,15 @@ interface Product {
     images: string[];
     isFeatured: boolean;
     style: string;
+    price: number;
     colors?: string[];
     materials?: string;
 }
 
-const categoriesList = ['Curtains', 'Sofa Fabrics', 'Wallpapers', 'Blinds', 'Carpets & Rugs', 'Mattresses', 'Flooring'];
+const categoriesList = ['Sofa Fabrics', 'Wallpapers', 'Blinds', 'Carpets & Rugs', 'Mattresses', 'Flooring'];
 const swatchColors = ['#AF8B44', '#2C2C2C', '#E5E4E2', '#C0C0C0', '#4169E1', '#800000', '#2E8B57'];
 
 const categoryImages = {
-    Curtains: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map(n => `/images/curtains/${n}.jpeg`),
     'Sofa Fabrics': [
         '/images/sofa.png',
         '/images/premium/sofa_1.png',
@@ -67,6 +68,8 @@ const ProductGrid = () => {
     const [visibleCount, setVisibleCount] = useState(12);
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
+    const addItem = useCartStore((state) => state.addItem);
+
     const generateMockProducts = useMemo(() => {
         const items: Product[] = [];
         for (let i = 1; i <= 150; i++) {
@@ -82,6 +85,7 @@ const ProductGrid = () => {
                 style: i % 2 === 0 ? 'Modern' : 'Classic',
                 description: `Exquisite ${cat.toLowerCase()} solution for premium home interiors.`,
                 images: [imgUrl],
+                price: 499 + (i * 10),
                 isFeatured: i <= 12,
                 colors: swatchColors.slice(0, 4)
             });
@@ -102,6 +106,7 @@ const ProductGrid = () => {
                         name: p.name,
                         category: p.category,
                         description: p.description,
+                        price: p.price || 0,
                         images: Array.isArray(p.images) ? p.images : [p.images],
                         isFeatured: p.is_featured || p.isFeatured,
                         style: p.style || 'Bespoke',
@@ -294,35 +299,35 @@ const ProductGrid = () => {
                                 </p>
                                 
                                 <div className="grid grid-cols-2 gap-6 mb-10">
-                                    <div className="bg-gray-50 p-4 rounded-sm border-l-2 border-gold/40">
-                                        <p className="text-[9px] uppercase tracking-widest text-gray-400 mb-1 font-black">Design Style</p>
+                                    <div className="bg-gray-50 p-6 rounded-sm border-l-2 border-gold/40">
+                                        <p className="text-[9px] uppercase tracking-widest text-gray-400 mb-2 font-black">Design Style</p>
                                         <p className="font-bold text-sm text-charcoal">{selectedProduct.style || "Bespoke Modern"}</p>
                                     </div>
-                                    <div className="bg-gray-50 p-4 rounded-sm border-l-2 border-gold/40">
-                                        <p className="text-[9px] uppercase tracking-widest text-gray-400 mb-1 font-black">AI Material</p>
+                                    <div className="bg-gray-50 p-6 rounded-sm border-l-2 border-gold/40">
+                                        <p className="text-[9px] uppercase tracking-widest text-gray-400 mb-2 font-black">AI Material</p>
                                         <p className="font-bold text-sm text-charcoal">Gemini Analyzed</p>
                                     </div>
                                 </div>
 
-                                {/* AI Insights Section */}
-                                <div className="mb-10 p-6 bg-charcoal text-white rounded-lg relative overflow-hidden group shadow-2xl">
-                                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
-                                        <Sparkles className="w-12 h-12 text-gold animate-pulse" />
-                                    </div>
-                                    <div className="text-gold text-[8px] font-black uppercase tracking-[0.4em] mb-4 flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 bg-gold rounded-full animate-ping" />
-                                        AI Designer Insight
-                                    </div>
-
-                                    <p className="text-[13px] font-serif italic text-gray-300 leading-relaxed">
-                                        "This texture pairs exquisitely with velvet neutrals and brushed brass accents. 15% better ambient occlusion in south-facing rooms."
-                                    </p>
-                                </div>
-
                                 <div className="flex flex-col gap-3">
+                                    <button
+                                        onClick={() => {
+                                            addItem({
+                                                id: selectedProduct._id,
+                                                name: selectedProduct.name,
+                                                image: selectedProduct.images[0],
+                                                price: selectedProduct.price
+                                            });
+                                            setSelectedProduct(null);
+                                        }}
+                                        className="bg-charcoal text-white py-5 font-black uppercase tracking-[0.4em] text-[10px] hover:bg-gold transition-all shadow-xl"
+                                    >
+                                        Add to Collection ✦
+                                    </button>
+                                    
                                     <div className="grid grid-cols-2 gap-3">
                                          <a 
-                                            href="/smart-showroom#ar-catalog" 
+                                            href={`/smart-showroom#ar-catalog`} 
                                             className="text-center py-4 border border-charcoal/10 text-[9px] font-black uppercase tracking-[0.3em] hover:bg-gray-50 flex items-center justify-center gap-2 transition-all hover:border-gold group"
                                         >
                                             <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse group-hover:scale-150 transition-transform" />
@@ -330,20 +335,17 @@ const ProductGrid = () => {
                                         </a>
                                         <button 
                                             onClick={() => window.location.href = '#showroom'}
-                                            className="text-center py-4 bg-charcoal text-white text-[9px] font-black uppercase tracking-[0.3em] hover:bg-gold hover:text-white flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-gold/20"
+                                            className="text-center py-4 border border-charcoal/10 text-charcoal text-[9px] font-black uppercase tracking-[0.3em] hover:bg-gold hover:text-white flex items-center justify-center gap-2 transition-all shadow-sm"
                                         >
-                                            <div className="w-4 h-4 border border-white/20 rounded-sm flex items-center justify-center group-hover:border-gold transition-colors">
-                                                <div className="w-1 h-1 bg-white rounded-full animate-ping" />
-                                            </div>
-                                            VR Immersive View
+                                            VR View
                                         </button>
                                     </div>
                                     <a
                                         href="#booking"
                                         onClick={() => setSelectedProduct(null)}
-                                        className="bg-gold text-white text-center py-5 font-black uppercase tracking-[0.4em] text-[10px] hover:bg-charcoal transition-all shadow-[0_20px_40px_-10px_rgba(212,175,55,0.4)]"
+                                        className="bg-gold/10 text-gold text-center py-5 font-black uppercase tracking-[0.4em] text-[10px] hover:bg-gold hover:text-white transition-all"
                                     >
-                                        Enquire For Bespoke Styling ✦
+                                        Enquire For Bespoke Styling
                                     </a>
                                 </div>
                             </div>

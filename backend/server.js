@@ -17,11 +17,15 @@ const productRoutes = require('./routes/products');
 const consultationRoutes = require('./routes/consultations');
 const blogRoutes = require('./routes/blog');
 const adminRoutes = require('./routes/admin');
+const authRoutes = require('./routes/auth');
+const orderRoutes = require('./routes/orders');
 
 app.use('/api/products', productRoutes);
 app.use('/api/consultations', consultationRoutes);
 app.use('/api/blog', blogRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/orders', orderRoutes);
 
 // Health check
 app.get('/', (req, res) => {

@@ -11,8 +11,10 @@ export default function AdminLayout({
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [password, setPassword] = useState("");
     const [adminPassword, setAdminPassword] = useState("rkadmin123");
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const fetchPassword = async () => {
             try {
                 const res = await fetch("http://localhost:5000/api/admin/settings");
@@ -36,6 +38,8 @@ export default function AdminLayout({
         }
     };
 
+    if (!mounted) return null;
+
     if (!isAuthenticated) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -53,10 +57,12 @@ export default function AdminLayout({
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="w-full border-b pb-2 border-gray-200 focus:border-gold focus:outline-none transition-colors text-sm"
                                 placeholder="Enter admin password"
+                                suppressHydrationWarning
                             />
                         </div>
                         <button
                             type="submit"
+                            suppressHydrationWarning
                             className="w-full bg-charcoal text-white text-[10px] uppercase tracking-[0.3em] py-4 rounded-sm hover:bg-gold hover:text-white transition-colors"
                         >
                             Secure Login

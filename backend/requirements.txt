@@ -1,0 +1,11 @@
+ultralytics
+ultralyticsplus
+huggingface_hub
+opencv-python
+numpy
+fastapi
+uvicorn
+python-multipart
+rembg
+Pillow
+requests

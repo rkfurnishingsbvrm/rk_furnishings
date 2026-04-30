@@ -102,7 +102,7 @@ const UIOverlay = () => {
                     <div className="flex justify-between items-center mb-10 bg-gray-50 p-6 rounded-sm">
                         <div>
                             <p className="text-[10px] text-gray-400 uppercase tracking-widest font-black mb-1 opacity-60">Signature Details</p>
-                            <span className="text-2xl font-serif text-charcoal font-medium">{selectedProduct.price}</span>
+                            <span className="text-2xl font-serif text-charcoal font-medium">Bespoke Collection</span>
                         </div>
                         <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold bg-white shadow-xl italic font-serif text-xs">RK</div>
                     </div>
@@ -158,10 +158,13 @@ export const ShowroomScene = () => {
     useEffect(() => {
         setMounted(true);
         return () => {
-             try {
-                if (document.pointerLockElement) document.exitPointerLock();
-             } catch (e) {
-                console.warn('Pointer lock exit failed during unmount:', e);
+             // Safe Exit Strategy
+             if (typeof document !== 'undefined' && document.pointerLockElement) {
+                 try {
+                    document.exitPointerLock();
+                 } catch (e) {
+                    console.warn('Pointer lock cleanup suppressed:', e);
+                 }
              }
              setLocked(false);
         };
@@ -169,7 +172,7 @@ export const ShowroomScene = () => {
 
     // Handle exiting lock when a product is selected
     useEffect(() => {
-        if (selectedProduct && document.pointerLockElement) {
+        if (selectedProduct && typeof document !== 'undefined' && document.pointerLockElement) {
              try {
                 document.exitPointerLock();
              } catch (e) {
@@ -209,8 +212,9 @@ export const ShowroomScene = () => {
                     </Physics>
                 </Suspense>
 
-                {/* Stable Control System - Always mounted for DOM stability */}
+                {/* Stable Control System - Scoped to container for DOM stability */}
                 <PointerLockControls 
+                    selector="#showroom-container"
                     onLock={() => {
                         console.log('🔒 Pointer Locked');
                         setLocked(true);
@@ -219,7 +223,6 @@ export const ShowroomScene = () => {
                         console.log('🔓 Pointer Unlocked');
                         setLocked(false);
                     }} 
-                    makeDefault 
                 />
             </Canvas>
 

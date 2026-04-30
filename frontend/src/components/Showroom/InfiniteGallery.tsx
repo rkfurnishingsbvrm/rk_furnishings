@@ -11,10 +11,9 @@ interface Product {
     description: string;
     images?: string[];
     image?: string;
-    price: string;
 }
 
-const CATEGORIES = ['Curtains', 'Sofa Fabrics', 'Wallpapers', 'Blinds', 'Carpets & Rugs', 'Mattresses', 'Flooring'];
+const CATEGORIES = ['Sofa Fabrics', 'Wallpapers', 'Blinds', 'Carpets & Rugs', 'Mattresses', 'Flooring'];
 
 export const InfiniteGallery = () => {
     const [products, setProducts] = useState<Product[]>([]);
@@ -28,13 +27,13 @@ export const InfiniteGallery = () => {
 
                 
                 if (data && data.length > 0) {
-                    setProducts(data.map((p: any) => ({
+                    const filtered = data.filter((p: any) => p.category !== 'Curtains');
+                    setProducts(filtered.map((p: { id: string, _id: string, name: string, category: string, description: string, images?: string[], image?: string }) => ({
                         id: p.id || p._id,
                         name: p.name,
                         category: p.category,
                         description: p.description,
-                        image: Array.isArray(p.images) ? p.images[0] : (p.image || '/images/premium/interior_1.png'),
-                        price: p.price || "Consult Stylist"
+                        image: Array.isArray(p.images) ? p.images[0] : (p.image || '/images/premium/interior_1.png')
                     })));
                 } else {
                     setProducts(generateMockLocal());
@@ -59,8 +58,7 @@ export const InfiniteGallery = () => {
                         name: `${style} ${cat} Series ${i}`,
                         category: cat,
                         description: `Premium ${style.toLowerCase()} design from our ${cat.toLowerCase()} collection.`,
-                        image: '/images/premium/interior_1.png',
-                        price: "Consult Stylist"
+                        image: '/images/premium/interior_1.png'
                     });
                 }
             });
@@ -101,7 +99,6 @@ export const InfiniteGallery = () => {
                         category={product.category}
                         name={product.name}
                         description={product.description}
-                        price={product.price}
                         position={[xPos, 5, zPos]} 
                         rotation={[0, 0, 0]} 
                         args={[6, 8, 0.2]} 

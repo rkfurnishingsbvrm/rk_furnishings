@@ -48,7 +48,15 @@ export default function FlowingMenu({
   );
 }
 
-function MenuItem({ text, image, onClick, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor }: any) {
+interface MenuItemProps extends FlowingMenuItem {
+  speed: number;
+  textColor: string;
+  marqueeBgColor: string;
+  marqueeTextColor: string;
+  borderColor: string;
+}
+
+function MenuItem({ text, image, onClick, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor }: MenuItemProps) {
   const itemRef = useRef<HTMLDivElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
   const marqueeInnerRef = useRef<HTMLDivElement>(null);

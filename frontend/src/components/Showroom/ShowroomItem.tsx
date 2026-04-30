@@ -15,10 +15,8 @@ interface ShowroomItemProps {
   color?: string;
   name: string;
   description: string;
-  price: string;
   image?: string;
 }
-
 
 const ShelfStack = ({ url, args, segments = 6 }: { url: string, args: [number, number, number], segments?: number }) => {
   const texture = useTexture(url);
@@ -53,7 +51,7 @@ const TexturedSurface = ({ url, args }: { url: string, args: [number, number, nu
   );
 };
 
-export const ShowroomItem = ({ id, category, position, rotation, args, color = "#fff", name, description, price, image }: ShowroomItemProps) => {
+export const ShowroomItem = ({ id, category, position, rotation, args, color = "#fff", name, description, image }: ShowroomItemProps) => {
   const [ref] = useBox(() => ({ type: "Static", position, rotation, args })) as any;
   const [hovered, setHovered] = useState(false);
   const { interactable, setInteractable, setSelectedProduct } = useStore();
@@ -73,7 +71,15 @@ export const ShowroomItem = ({ id, category, position, rotation, args, color = "
     }
 
     if (isClose && interact) {
-        setSelectedProduct({id, name, description, price, image});
+        setSelectedProduct({
+            _id: id,
+            name,
+            description,
+            category,
+            images: image ? [image] : [],
+            isFeatured: false,
+            style: 'Bespoke'
+        });
     }
 
     if (groupRef.current) {
@@ -81,7 +87,7 @@ export const ShowroomItem = ({ id, category, position, rotation, args, color = "
         const targetScale = isClose ? 1.05 : 1;
         groupRef.current.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
         
-        const targetRotY = rotation[1] + (isClose ? (Math.sin(state.clock.elapsedTime * 0.5) * 0.05) : 0);
+        const targetRotY = rotation[1];
         groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, targetRotY, 0.1);
     }
   });

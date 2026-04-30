@@ -9,6 +9,7 @@ interface Product {
     name: string;
     category: string;
     description: string;
+    price: number;
     images: string[];
     is_featured: boolean;
     created_at: string;
@@ -176,7 +177,7 @@ export default function ProductsAdmin() {
                         <tbody>
                             {filteredProducts.length === 0 ? (
                                 <tr>
-                                    <td colSpan={5} className="p-12 text-center text-gray-400 text-sm italic">
+                                    <td colSpan={6} className="p-12 text-center text-gray-400 text-sm italic">
                                         {searchQuery || categoryFilter ? 'No products match your filter.' : 'No products found. Add your first product to get started.'}
                                     </td>
                                 </tr>
@@ -199,6 +200,7 @@ export default function ProductsAdmin() {
                                         <td className="p-6">
                                             <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-bold">{product.category}</span>
                                         </td>
+
                                         <td className="p-6">
                                             <span className={`text-[10px] uppercase tracking-wider font-bold flex items-center gap-2 ${product.is_featured ? 'text-gold' : 'text-green-600'}`}>
                                                 <span className={`w-2 h-2 rounded-full block ${product.is_featured ? 'bg-gold' : 'bg-green-500'}`}></span>

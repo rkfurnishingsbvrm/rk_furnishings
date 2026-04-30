@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, User, Phone, Mail, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import { API_BASE_URL } from '@/lib/config';
+import { useMeasurementStore } from '@/store/useStore';
 
 const ConsultationForm = () => {
-
+    const { measurements, recommendedSizing } = useMeasurementStore();
     const [formData, setFormData] = useState({
         userName: '',
         phone: '',
@@ -16,6 +17,23 @@ const ConsultationForm = () => {
         preferredDate: '',
         message: '',
     });
+
+    useEffect(() => {
+        if (measurements.length > 0 || recommendedSizing) {
+            let msg = 'AI Spatial Data Attachments:\n';
+            if (measurements.length > 0) {
+                msg += `Measurements: ${measurements.map(m => `${m.label}: ${m.distanceCm}cm`).join(', ')}\n`;
+            }
+            if (recommendedSizing) {
+                msg += `AI Recommended Size: ${recommendedSizing.width}cm x ${recommendedSizing.height}cm`;
+            }
+            setFormData(prev => ({
+                ...prev,
+                message: msg,
+                serviceType: 'In-Home Measurement'
+            }));
+        }
+    }, [measurements, recommendedSizing]);
 
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);

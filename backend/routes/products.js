@@ -89,7 +89,7 @@ router.get('/:id', async (req, res) => {
 // POST create product (admin)
 router.post('/', async (req, res) => {
     try {
-        const { name, category, description, images, materials, colors, is_featured } = req.body;
+        const { name, category, description, images, materials, colors, is_featured, price } = req.body;
         if (!name || !category || !description) {
             return res.status(400).json({ message: 'name, category, and description are required' });
         }
@@ -98,7 +98,11 @@ router.post('/', async (req, res) => {
         try {
             const { data, error } = await supabase
                 .from('products')
-                .insert([{ name, category, description, images: images || [], materials, colors: colors || [], is_featured: is_featured || false }])
+                .insert([{ 
+                    name, category, description, price: price || 0,
+                    images: images || [], materials, colors: colors || [], 
+                    is_featured: is_featured || false 
+                }])
                 .select()
                 .single();
             if (error) throw error;
@@ -108,6 +112,7 @@ router.post('/', async (req, res) => {
             newProduct = {
                 id: `local-${Date.now()}`,
                 name, category, description,
+                price: price || 0,
                 images: images || [],
                 materials,
                 colors: colors || [],

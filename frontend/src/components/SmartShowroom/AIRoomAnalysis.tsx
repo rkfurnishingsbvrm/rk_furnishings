@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { Camera, Upload, Layout, Palette, Sparkles, CheckCircle2 } from 'lucide-react';
-import { analyzeRoom } from '@/lib/gemini';
+import { analyzeRoom, RoomAnalysis, AIDesignRecommendation } from '@/lib/gemini';
 import { motion, AnimatePresence } from 'framer-motion';
 import ARViewer from './ARViewer';
 import NextImage from 'next/image';
@@ -11,7 +11,7 @@ const AIRoomAnalysis: React.FC = () => {
     const [image, setImage] = useState<File | null>(null);
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
     const [analyzing, setAnalyzing] = useState(false);
-    const [result, setResult] = useState<any>(null);
+    const [result, setResult] = useState<RoomAnalysis | null>(null);
     const fileRef = useRef<HTMLInputElement>(null);
 
     const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,6 +51,31 @@ const AIRoomAnalysis: React.FC = () => {
                 </div>
                 <h2 className="text-5xl md:text-7xl font-serif text-charcoal mb-8 leading-tight italic">The Smart Stylist <br/>Experience</h2>
                 <div className="w-24 h-1 bg-gold mx-auto mb-10 shadow-[0_0_15px_rgba(212,175,55,0.4)]" />
+                
+                {/* Pipeline Step Indicators */}
+                <div className="flex justify-center items-center gap-4 mb-12">
+                    {[
+                        { id: 1, label: 'Upload' },
+                        { id: 2, label: 'Analysis' },
+                        { id: 3, label: 'Visualize' }
+                    ].map((step) => (
+                        <div key={step.id} className="flex items-center gap-4">
+                            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-black transition-all ${
+                                !previewUrl ? (step.id === 1 ? 'bg-gold text-white shadow-lg' : 'bg-gray-100 text-gray-400') :
+                                analyzing ? (step.id === 2 ? 'bg-gold text-white animate-pulse' : (step.id === 1 ? 'bg-charcoal text-white' : 'bg-gray-100 text-gray-400')) :
+                                result ? (step.id === 3 ? 'bg-gold text-white shadow-lg' : 'bg-charcoal text-white') :
+                                'bg-gray-100 text-gray-400'
+                            }`}>
+                                {step.id}
+                            </div>
+                            <span className={`text-[9px] font-black uppercase tracking-widest ${
+                                (step.id === 1 && !previewUrl) || (step.id === 2 && analyzing) || (step.id === 3 && result) ? 'text-charcoal' : 'text-gray-300'
+                            }`}>{step.label}</span>
+                            {step.id < 3 && <div className="w-12 h-[1px] bg-gray-100" />}
+                        </div>
+                    ))}
+                </div>
+
                 <p className="max-w-2xl mx-auto text-gray-500 text-lg leading-relaxed font-light font-sans tracking-wide">
                     Upload a photograph of your space. Our AI engine will analyze your existing 
                     palette, lighting, and spatial constraints to recommend the perfect RK signature pieces.
@@ -69,7 +94,7 @@ const AIRoomAnalysis: React.FC = () => {
                     >
                         {previewUrl ? (
                             <>
-                                <img src={previewUrl} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src={previewUrl} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Room Scan Preview" />
                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                                     <span className="text-white font-bold uppercase tracking-[0.2em] text-[10px] bg-charcoal/80 px-6 py-3 rounded-full border border-white/20">Replace Capture</span>
                                 </div>
@@ -129,7 +154,7 @@ const AIRoomAnalysis: React.FC = () => {
                         {analyzing ? (
                             <>
                                 <div className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
-                                Analyzing Space...
+                                Matching Catalog...
                             </>
                         ) : (
                             <>
@@ -158,24 +183,41 @@ const AIRoomAnalysis: React.FC = () => {
                             animate={{ opacity: 1, x: 0 }}
                             className="space-y-12"
                         >
-                            {/* Analysis Summary */}
-                            <div className="grid grid-cols-2 gap-6">
-                                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <Layout className="w-4 h-4 text-gold" />
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Design Identity</span>
+                            {/* Feature Extraction Summary */}
+                            <div>
+                                <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-gold mb-6 flex items-center gap-4">
+                                    <span className="w-12 h-[1px] bg-gold opacity-50" />
+                                    Room Profile Summary
+                                    <span className="w-12 h-[1px] bg-gold opacity-50" />
+                                </h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm col-span-1">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <Layout className="w-4 h-4 text-gold" />
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Design Identity</span>
+                                        </div>
+                                        <p className="text-2xl font-serif text-charcoal italic">{result.style}</p>
                                     </div>
-                                    <p className="text-2xl font-serif text-charcoal italic">{result.style}</p>
-                                </div>
-                                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <Palette className="w-4 h-4 text-gold" />
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Color Palette</span>
+                                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm col-span-1">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <Palette className="w-4 h-4 text-gold" />
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Color Palette</span>
+                                        </div>
+                                        <div className="flex gap-2">
+                                            {result.colors?.map((c: string, i: number) => (
+                                                <div key={`room-color-${i}`} className="w-8 h-4 rounded-sm border border-black/10 shadow-sm" style={{ backgroundColor: c }} title={c} />
+                                            ))}
+                                        </div>
                                     </div>
-                                    <div className="flex gap-2">
-                                        {result.colors?.map((c: string, i: number) => (
-                                            <div key={`room-color-${i}`} className="w-8 h-4 rounded-sm border border-black/10 shadow-sm" style={{ backgroundColor: c }} />
-                                        ))}
+                                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm col-span-1">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <Camera className="w-4 h-4 text-gold" />
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Wall & Surface Analysis</span>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <p className="text-xs font-bold text-charcoal">{result.windowInfo?.location}</p>
+                                            <p className="text-[10px] text-gray-400 uppercase tracking-tighter">{result.windowInfo?.suggestedType} • {result.windowInfo?.suggestedLength}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -189,25 +231,9 @@ const AIRoomAnalysis: React.FC = () => {
                                 </h3>
 
                                 <div className="space-y-8">
-                                    {result.recommendations?.map((rec: any, i: number) => {
-                                        const isFabricBased = rec.category === 'Curtains' || rec.category === 'Wallpapers';
-                                        
-                                        // Dynamic Image Mapping: Extract Series Number from name if available
-                                        const seriesMatch = rec.name?.match(/Series (\d+)/i);
-                                        const seriesNum = seriesMatch ? parseInt(seriesMatch[1]) : (Math.floor(Math.random() * 15) + 1);
-                                        
+                                    {result.recommendations?.map((rec: AIDesignRecommendation, i: number) => {
                                         // Final Resolution: Professional Material Blocks for 3D inspection
-                                        const displayModel = isFabricBased 
-                                            ? "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoxTextured/glTF-Binary/BoxTextured.glb"
-                                            : "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb";
-
-                                        // Map the Series Number back to our 15-image catalog
-                                        const posterIndex = ((seriesNum - 1) % 15) + 1;
-                                        const displayPoster = `/images/curtains/${posterIndex}.jpeg`;
-
-
-
-
+                                        const displayModel = "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoxTextured/glTF-Binary/BoxTextured.glb";
 
                                         return (
                                             <motion.div 
@@ -217,36 +243,54 @@ const AIRoomAnalysis: React.FC = () => {
                                                 transition={{ delay: i * 0.2 }}
                                                 className="bg-white p-8 rounded-2xl border border-gray-100 shadow-xl group hover:shadow-gold/20 hover:border-gold/30 transition-all overflow-hidden relative"
                                             >
-                                                <div className="flex flex-col lg:flex-row gap-12 items-center">
-                                                    <div className="w-full lg:w-72 shrink-0 h-96 relative rounded-xl overflow-hidden ring-1 ring-gray-100 shadow-inner">
-                                                        <ARViewer 
-                                                            modelUrl={displayModel} 
-                                                            name={rec.name} 
-                                                            poster={displayPoster}
-                                                        />
+                                                {/* Match % Ribbon */}
+                                                <div className="absolute top-0 right-0 overflow-hidden w-32 h-32 z-20 pointer-events-none">
+                                                    <div className="bg-gold text-white text-[10px] font-black py-1 w-44 text-center absolute top-6 right-[-45px] rotate-45 shadow-lg border-y border-white/20">
+                                                        {rec.matchPercentage}% MATCH
                                                     </div>
+                                                </div>
+
+                                                <div className="flex flex-col gap-8">
                                                     <div className="flex-1 pt-2 space-y-6">
-                                                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-green-50 text-green-700 rounded-full text-[9px] font-black tracking-widest uppercase mb-4 border border-green-100">
-                                                            <CheckCircle2 className="w-3 h-3" />
-                                                            Verified {rec.category} Recommendation
+                                                        <div className="flex flex-wrap gap-2 mb-4">
+                                                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-green-50 text-green-700 rounded-full text-[9px] font-black tracking-widest uppercase border border-green-100">
+                                                                <CheckCircle2 className="w-3 h-3" />
+                                                                {rec.tag || "Recommended"}
+                                                            </div>
+                                                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-gold/5 text-gold rounded-full text-[9px] font-black tracking-widest uppercase border border-gold/20">
+                                                                {rec.materials} • {rec.style || 'Bespoke'}
+                                                            </div>
                                                         </div>
                                                         
                                                         <h3 className="text-3xl font-serif text-charcoal italic">{rec.name}</h3>
-                                                        <p className="text-lg font-light leading-relaxed text-gray-500 italic max-w-2xl">{rec.reason}</p>
+                                                        
+                                                        <div className="bg-gray-50/80 p-6 rounded-xl border border-gray-100 relative">
+                                                            <div className="absolute -top-3 left-4 bg-white px-3 py-1 border border-gray-100 rounded-full text-[8px] font-black uppercase tracking-widest text-gold">AI Matching Logic</div>
+                                                            <p className="text-lg font-light leading-relaxed text-gray-500 italic">&quot;{rec.reason}&quot;</p>
+                                                        </div>
                                                         
                                                         <div className="flex flex-wrap gap-6 pt-4">
                                                             <button 
-                                                                onClick={() => alert(`RK Full Specifications Package for: ${rec.name}\n\nOur stylists recommend this series for high-end residential interiors.`)}
+                                                                onClick={() => alert(`RK Full Specifications Package for: ${rec.name}\n\nOur AI considers this the optimal choice for your spatial lighting and color depth.`)}
                                                                 className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-charcoal hover:text-gold transition-all"
                                                             >
-                                                                Full Specs <span>+</span>
+                                                                Technical Specs <span>+</span>
+                                                            </button>
+                                                            <button 
+                                                                onClick={(e) => {
+                                                                    e.currentTarget.classList.toggle('text-red-500');
+                                                                    alert(`"${rec.name}" has been added to your Saved Spaces!`);
+                                                                }}
+                                                                className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-charcoal hover:text-red-500 transition-all"
+                                                            >
+                                                                Save Choice <span>❤</span>
                                                             </button>
                                                             <a 
-                                                                href={`https://wa.me/917382212345?text=Hi, I am interested in the ${rec.name} from your Curated ${rec.category} Collection!`}
+                                                                href={`https://wa.me/917382212345?text=Hi, I am interested in the ${rec.name} (Match Score: ${rec.matchPercentage}%) suggested by your AI Room Analysis!`}
                                                                 target="_blank"
-                                                                className="flex items-center gap-4 bg-green-600 text-white px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-widest shadow-2xl hover:bg-charcoal transition-all"
+                                                                className="flex items-center gap-4 bg-green-600 text-white px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-widest shadow-2xl hover:bg-charcoal transition-all scale-100 hover:scale-105"
                                                             >
-                                                                Consult Stylist <NextImage src="/images/whatsapp.png" width={16} height={16} alt="WA" />
+                                                                Consult Expert Stylist <NextImage src="/images/whatsapp.png" width={16} height={16} alt="WA" />
                                                             </a>
                                                         </div>
                                                     </div>

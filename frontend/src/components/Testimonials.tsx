@@ -49,7 +49,7 @@ const Testimonials = () => {
                                     <Star key={idx} className="w-4 h-4 fill-current" />
                                 ))}
                             </div>
-                            <p className="text-gray-600 italic mb-6 leading-relaxed">"{t.text}"</p>
+                            <p className="text-gray-600 italic mb-6 leading-relaxed">&quot;{t.text}&quot;</p>
                             <div className="mt-auto">
                                 <p className="text-charcoal font-bold text-lg">{t.name}</p>
                                 <p className="text-gold text-sm font-medium uppercase tracking-wider">{t.location}</p>
