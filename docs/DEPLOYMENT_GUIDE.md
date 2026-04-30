@@ -19,10 +19,13 @@ This system is now architected for a production-grade decoupled deployment.
 **Recommended Platform:** [Vercel](https://vercel.com)
 
 1.  Import project to Vercel.
-2.  Set **Root Directory** as `frontend/`.
-3.  **Environment Variables:**
+2.  Set **Root Directory** as `./` (Project Root).
+3.  **Build Command:** `npm run build`
+4.  **Output Directory:** `.next`
+5.  **Environment Variables:**
     - `NEXT_PUBLIC_API_URL=https://your-backend-url.onrender.com`
-4.  Deploy!
+    - `NEXT_PUBLIC_GEMINI_API_KEY=your_key`
+6.  Deploy!
 
 ## 🏠 Local Development (Triple-Stack)
 Starting the entire ecosystem locally:

@@ -23,6 +23,8 @@ export interface AIDesignRecommendation {
     reason: string;
     modelUrl: string;
     displayPoster?: string;
+    materials?: string;
+    style?: string;
 }
 
 export interface RoomAnalysis {
@@ -58,7 +60,9 @@ export async function analyzeRoom(imageFile: File): Promise<RoomAnalysis> {
                 matchPercentage: Math.floor(Math.random() * 15) + 85,
                 tag: "Recommended for your room",
                 reason: `The ${item.materials.toLowerCase()} material and ${(item.colors || [])[0]?.toLowerCase() || 'neutral'} tones perfectly complement your wall colors and furniture layout.`,
-                modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb"
+                modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb",
+                materials: item.materials,
+                style: item.style
             })),
             layout: "Dynamic spatial optimization recommended."
         };
@@ -100,6 +104,8 @@ export async function analyzeRoom(imageFile: File): Promise<RoomAnalysis> {
                "matchPercentage": number,
                "tag": "string",
                "reason": "string",
+               "materials": "string",
+               "style": "string",
                "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb" 
             }
         ], 
@@ -138,6 +144,8 @@ export async function analyzeRoom(imageFile: File): Promise<RoomAnalysis> {
                         matchPercentage: 92,
                         tag: "Style Match",
                         reason: "Strategically selected to compliment the natural light detected in the frame.",
+                        materials: item.materials,
+                        style: item.style,
                         modelUrl: "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb"
                     })),
                     layout: "Custom spatial mapping based on room detection."

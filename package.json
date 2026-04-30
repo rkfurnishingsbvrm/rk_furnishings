@@ -12,7 +12,6 @@
     "install-backend": "npm install --prefix backend"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "@google/model-viewer": "^4.2.0",
     "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^10.7.7",
@@ -42,10 +41,11 @@
     "zustand": "^5.0.12"
   },
   "devDependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/node": "^20.19.39",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "concurrently": "^8.2.2",
     "cross-env": "^10.1.0",
     "eslint": "^9",
