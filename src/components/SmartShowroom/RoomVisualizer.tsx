@@ -9,7 +9,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 const WALLPAPER_LIST = [
   { id: 1, name: 'Royal Gold Damask', img: '/images/wallpaper.png' },
   { id: 2, name: 'Minimalist Textured Grey', img: '/images/premium/wallpaper_1.png' },
-  { id: 3, name: 'Contemporary Floral', img: '/images/premium/fabrics_1.png' },
+  ...Array.from({ length: 10 }, (_, i) => ({
+    id: i + 3,
+    name: `E-Joy Series ${i + 1}`,
+    img: `/images/wallpapers/wallpaper_${i + 1}.jpeg`
+  }))
 ];
 
 const API_ROOT = "http://localhost:10000";

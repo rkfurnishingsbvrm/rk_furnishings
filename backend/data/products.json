@@ -1513,9 +1513,14 @@
     "name": "Artisanal Drape Collection - Design 1",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/0f/a4/a5/0fa4a5b46b5160c8f4036a15003e8c28.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/0f/a4/a5/0fa4a5b46b5160c8f4036a15003e8c28.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-1"
   },
@@ -1523,9 +1528,14 @@
     "name": "Artisanal Drape Collection - Design 2",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/bf/a1/fa/bfa1fa94e627e11a4fa83cc0ee99b05c.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/bf/a1/fa/bfa1fa94e627e11a4fa83cc0ee99b05c.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-2"
   },
@@ -1533,9 +1543,14 @@
     "name": "Artisanal Drape Collection - Design 3",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/b0/4a/f3/b04af3e01fd44a068848f66a1de0c28a.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/b0/4a/f3/b04af3e01fd44a068848f66a1de0c28a.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-3"
   },
@@ -1543,9 +1558,14 @@
     "name": "Artisanal Drape Collection - Design 4",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/65/37/42/6537424d1603266e87c8eec1e6540c77.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/65/37/42/6537424d1603266e87c8eec1e6540c77.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-4"
   },
@@ -1553,9 +1573,14 @@
     "name": "Artisanal Drape Collection - Design 5",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/71/0d/2f/710d2fca50e71f8cb150b78094fae76c.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/71/0d/2f/710d2fca50e71f8cb150b78094fae76c.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-5"
   },
@@ -1563,9 +1588,14 @@
     "name": "Artisanal Drape Collection - Design 6",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/22/d9/c4/22d9c481407d1afa8359e0e901b99ce3.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/22/d9/c4/22d9c481407d1afa8359e0e901b99ce3.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-6"
   },
@@ -1573,9 +1603,14 @@
     "name": "Artisanal Drape Collection - Design 7",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/89/72/c9/8972c98ed56dfe29953d17ec7f81ff83.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/89/72/c9/8972c98ed56dfe29953d17ec7f81ff83.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-7"
   },
@@ -1583,9 +1618,14 @@
     "name": "Artisanal Drape Collection - Design 8",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/16/d3/6d/16d36dd94f5ab4b09c482ef0787ab604.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/16/d3/6d/16d36dd94f5ab4b09c482ef0787ab604.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-8"
   },
@@ -1593,9 +1633,14 @@
     "name": "Artisanal Drape Collection - Design 9",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/5c/6e/13/5c6e13d8336fc2c75c11c824fddaad90.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/5c/6e/13/5c6e13d8336fc2c75c11c824fddaad90.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-9"
   },
@@ -1603,9 +1648,14 @@
     "name": "Artisanal Drape Collection - Design 10",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/67/2d/7d/672d7d93196652c08a99ac70b7a01b5c.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/67/2d/7d/672d7d93196652c08a99ac70b7a01b5c.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-10"
   },
@@ -1613,9 +1663,14 @@
     "name": "Artisanal Drape Collection - Design 11",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/75/a5/fc/75a5fcd1512aa1ee673dd99ccb9154d8.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/75/a5/fc/75a5fcd1512aa1ee673dd99ccb9154d8.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-11"
   },
@@ -1623,9 +1678,14 @@
     "name": "Artisanal Drape Collection - Design 12",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/97/6f/b8/976fb8697b20cdca393d9e3942b92288.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/97/6f/b8/976fb8697b20cdca393d9e3942b92288.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-12"
   },
@@ -1633,9 +1693,14 @@
     "name": "Artisanal Drape Collection - Design 13",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/29/24/52/292452569560411319.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/29/24/52/292452569560411319.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-13"
   },
@@ -1643,9 +1708,14 @@
     "name": "Artisanal Drape Collection - Design 14",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/29/24/52/292452569560411317.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/29/24/52/292452569560411317.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-14"
   },
@@ -1653,9 +1723,14 @@
     "name": "Artisanal Drape Collection - Design 15",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/29/24/52/292452569560411316.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/29/24/52/292452569560411316.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-15"
   },
@@ -1663,9 +1738,14 @@
     "name": "Artisanal Drape Collection - Design 16",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/29/24/52/292452569560411315.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/29/24/52/292452569560411315.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-16"
   },
@@ -1673,9 +1753,14 @@
     "name": "Artisanal Drape Collection - Design 17",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/29/24/52/292452569560411314.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/29/24/52/292452569560411314.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-17"
   },
@@ -1683,9 +1768,14 @@
     "name": "Artisanal Drape Collection - Design 18",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/29/24/52/292452569560411313.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/29/24/52/292452569560411313.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-18"
   },
@@ -1693,9 +1783,14 @@
     "name": "Artisanal Drape Collection - Design 19",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/29/24/52/292452569560411312.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/29/24/52/292452569560411312.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-19"
   },
@@ -1703,10 +1798,1125 @@
     "name": "Artisanal Drape Collection - Design 20",
     "category": "Curtains",
     "description": "A premium artisanal drape from the Pinterest collection. High-quality fabric with sophisticated patterns.",
-    "images": ["https://i.pinimg.com/564x/29/24/52/292452569560411311.jpg"],
+    "images": [
+      "https://i.pinimg.com/564x/29/24/52/292452569560411311.jpg"
+    ],
     "materials": "Premium Fabric",
-    "colors": ["Cream", "Gold"],
+    "colors": [
+      "Cream",
+      "Gold"
+    ],
     "is_featured": true,
     "id": "pin-curtain-20"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 1",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_1.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-0"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 2",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_10.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-1"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 3",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_11.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-2"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 4",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_12.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-3"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 5",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_13.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-4"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 6",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_14.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-5"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 7",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_15.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-6"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 8",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_16.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-7"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 9",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_17.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-8"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 10",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_18.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": true,
+    "id": "local-wallpaper-9"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 11",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_19.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-10"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 12",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_2.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-11"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 13",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_20.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-12"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 14",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_21.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-13"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 15",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_22.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-14"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 16",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_23.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-15"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 17",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_24.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-16"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 18",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_25.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-17"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 19",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_26.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-18"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 20",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_27.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-19"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 21",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_28.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-20"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 22",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_29.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-21"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 23",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_3.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-22"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 24",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_30.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-23"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 25",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_31.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-24"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 26",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_32.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-25"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 27",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_33.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-26"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 28",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_34.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-27"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 29",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_35.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-28"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 30",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_36.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-29"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 31",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_37.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-30"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 32",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_38.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-31"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 33",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_39.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-32"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 34",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_4.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-33"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 35",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_40.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-34"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 36",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_41.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-35"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 37",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_42.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-36"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 38",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_43.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-37"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 39",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_44.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-38"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 40",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_45.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-39"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 41",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_46.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-40"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 42",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_47.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-41"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 43",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_48.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-42"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 44",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_49.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-43"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 45",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_5.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-44"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 46",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_50.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-45"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 47",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_51.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-46"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 48",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_52.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-47"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 49",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_53.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-48"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 50",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_54.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-49"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 51",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_55.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-50"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 52",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_56.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-51"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 53",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_57.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-52"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 54",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_58.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-53"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 55",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_59.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-54"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 56",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_6.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-55"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 57",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_60.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-56"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 58",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_61.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-57"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 59",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_62.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-58"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 60",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_63.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-59"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 61",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_64.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-60"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 62",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_65.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-61"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 63",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_66.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-62"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 64",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_67.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-63"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 65",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_68.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-64"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 66",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_69.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-65"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 67",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_7.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-66"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 68",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_70.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-67"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 69",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_71.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-68"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 70",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_72.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-69"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 71",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_73.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-70"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 72",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_74.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-71"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 73",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_8.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-72"
+  },
+  {
+    "name": "Premium E-Joy Wallpaper Series 74",
+    "category": "Wallpapers",
+    "description": "High-end designer wallpaper from the E-Joy collection. Perfect for premium Bhimavaram residence interiors.",
+    "images": [
+      "/images/wallpapers/wallpaper_9.jpeg"
+    ],
+    "materials": "Premium Vinyl/Fabric",
+    "colors": [
+      "Neutral",
+      "Textured"
+    ],
+    "is_featured": false,
+    "id": "local-wallpaper-73"
   }
 ]
