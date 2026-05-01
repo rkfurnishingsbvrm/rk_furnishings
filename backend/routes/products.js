@@ -29,8 +29,8 @@ router.get('/', async (req, res) => {
         const curtainsToMerge = !hasCurtains ? localData.filter(p => p.category === 'Curtains') : [];
         
         // 2. Ensure E-Joy Wallpapers are merged (since they are local-only for now)
-        const hasEJoy = cloudData.some(p => p.name.includes('E-Joy'));
-        const wallpapersToMerge = !hasEJoy ? localData.filter(p => p.category === 'Wallpapers' && p.name.includes('E-Joy')) : [];
+        const hasEJoy = cloudData.some(p => p.name?.includes('E-Joy'));
+        const wallpapersToMerge = !hasEJoy ? localData.filter(p => p.category === 'Wallpapers' && p.name?.includes('E-Joy')) : [];
         
         data = [...cloudData, ...curtainsToMerge, ...wallpapersToMerge];
     } catch (dbErr) {
