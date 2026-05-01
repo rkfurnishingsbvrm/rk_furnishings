@@ -21,16 +21,18 @@ router.get('/', async (req, res) => {
             throw new Error(error ? error.message : 'No data');
         }
         
-        // Merge cloud data with local data if Curtains category is missing
+        // Merge cloud data with local data for Curtains and Wallpapers
         const localData = localDb.getProducts();
+        
+        // 1. Ensure Curtains are merged if missing
         const hasCurtains = cloudData.some(p => p.category === 'Curtains');
-        if (!hasCurtains) {
-            console.log('⚠️ Curtains category missing from Supabase. Merging local curtains catalogue.');
-            const localCurtains = localData.filter(p => p.category === 'Curtains');
-            data = [...cloudData, ...localCurtains];
-        } else {
-            data = cloudData;
-        }
+        const curtainsToMerge = !hasCurtains ? localData.filter(p => p.category === 'Curtains') : [];
+        
+        // 2. Ensure E-Joy Wallpapers are merged (since they are local-only for now)
+        const hasEJoy = cloudData.some(p => p.name.includes('E-Joy'));
+        const wallpapersToMerge = !hasEJoy ? localData.filter(p => p.category === 'Wallpapers' && p.name.includes('E-Joy')) : [];
+        
+        data = [...cloudData, ...curtainsToMerge, ...wallpapersToMerge];
     } catch (dbErr) {
         console.log('🔄 Local fallback triggered. Reason:', dbErr.message);
         try {
