@@ -117,17 +117,34 @@ const RoomVisualizer: React.FC = () => {
   const addWallpaperToCanvas = async (wallpaperPath: string) => {
     if (!canvas) return;
     try {
+      // Remove any existing wallpapers/rects to prevent stacking
+      const objects = canvas.getObjects();
+      objects.forEach(obj => {
+        if (obj !== objects[0]) { // Keep the room photo (the bottom-most object)
+          canvas.remove(obj);
+        }
+      });
+
       const oImg = await fabric.FabricImage.fromURL(wallpaperPath);
+      
+      // Calculate a generous size to cover the wall
+      const scale = (canvas.width! / oImg.width!) * 1.2;
+      
       oImg.set({
-        left: 300,
-        top: 200,
-        scaleX: 0.8,
-        scaleY: 0.8,
-        opacity: 0.95,
+        left: canvas.width! / 2,
+        top: canvas.height! / 2,
+        originX: 'center',
+        originY: 'center',
+        scaleX: scale,
+        scaleY: scale,
+        opacity: 0.85, // Slight transparency to let wall texture/shadows show through
         cornerColor: '#D4AF37',
         cornerStyle: 'circle',
-        transparentCorners: false
+        transparentCorners: false,
+        borderColor: '#D4AF37',
+        borderScaleFactor: 2,
       });
+
       canvas.add(oImg);
       canvas.setActiveObject(oImg);
       canvas.renderAll();
