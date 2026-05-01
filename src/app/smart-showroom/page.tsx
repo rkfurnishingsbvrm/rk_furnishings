@@ -101,7 +101,6 @@ const SmartShowroomPage: React.FC = () => {
                     <Link href="/" className="hover:text-gold transition-colors">Return to Home</Link>
                     <a href="#measure" className="hover:text-gold transition-colors">01. Measure</a>
                     <a href="#analyze" className="hover:text-gold transition-colors">02. Stylist</a>
-                    <a href="#visualize" className="hover:text-gold transition-colors">03. Virtualize</a>
                 </div>
             </nav>
 
@@ -130,7 +129,7 @@ const SmartShowroomPage: React.FC = () => {
                         </p>
 
                         <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-                            <a href="#visualize" className="px-16 py-8 bg-gold text-white font-black uppercase tracking-[0.4em] text-xs hover:bg-white hover:text-charcoal transition-all shadow-[0_30px_60px_-15px_rgba(212,175,55,0.4)]">Visualizer Tool</a>
+                            <a href="#measure" className="px-16 py-8 bg-gold text-white font-black uppercase tracking-[0.4em] text-xs hover:bg-white hover:text-charcoal transition-all shadow-[0_30px_60px_-15px_rgba(212,175,55,0.4)]">Start Measurement</a>
                         </div>
                     </motion.div>
                 </div>
@@ -149,12 +148,6 @@ const SmartShowroomPage: React.FC = () => {
                 </div>
                 <AIRoomAnalysis />
             </section>
-
-            <div id="visualize">
-                <RoomVisualizer />
-            </div>
-
-
 
             <footer className="py-20 bg-black text-white/20 border-t border-white/5 text-center">
                 <p className="text-[9px] font-black uppercase tracking-[0.8em]">RK FURNISHINGS CO // BHIMAVARAM</p>
