@@ -29,7 +29,7 @@ const swatchColors = ['#AF8B44', '#2C2C2C', '#E5E4E2', '#C0C0C0', '#4169E1', '#8
 const categoryImages = {
     'Curtains': [
         '/images/curtains.png',
-        '/images/premium/curtains_1.png',
+        '/images/curtains/1.jpeg',
         '/images/curtains.png'
     ],
     'Sofa Fabrics': [
