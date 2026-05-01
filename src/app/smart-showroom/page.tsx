@@ -31,9 +31,8 @@ const SmartShowroomPage: React.FC = () => {
                 const response = await fetch(`${API_BASE_URL}/products`);
                 const data = await response.json();
                 
-                const filteredData = data.filter((p: any) => p.category !== 'Curtains');
-                const mappedProducts = filteredData.slice(0, 100).map((p: { id: string, name: string, category: string, images?: string[], description?: string }, i: number) => {
-                    const isFabricBased = p.category === 'Wallpapers' || p.category === 'Sofa Fabrics' || p.category === 'Blinds';
+                const mappedProducts = data.slice(0, 100).map((p: { id: string, name: string, category: string, images?: string[], description?: string }, i: number) => {
+                    const isFabricBased = p.category === 'Wallpapers' || p.category === 'Sofa Fabrics' || p.category === 'Blinds' || p.category === 'Curtains';
                     
                     const displayModel = isFabricBased 
                         ? "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoxTextured/glTF-Binary/BoxTextured.glb"
@@ -62,7 +61,7 @@ const SmartShowroomPage: React.FC = () => {
                 }));
                 
                 const mappedProducts = fallbackData.map((p, i) => {
-                    const isFabricBased = p.category === 'Wallpapers' || p.category === 'Sofa Fabrics' || p.category === 'Blinds';
+                    const isFabricBased = p.category === 'Wallpapers' || p.category === 'Sofa Fabrics' || p.category === 'Blinds' || p.category === 'Curtains';
                     const displayModel = isFabricBased 
                         ? "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoxTextured/glTF-Binary/BoxTextured.glb"
                         : "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb";

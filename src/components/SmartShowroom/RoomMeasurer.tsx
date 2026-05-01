@@ -286,7 +286,11 @@ const RoomMeasurer: React.FC = () => {
     const handlePointerUp = (e: React.PointerEvent) => {
         if (editingPoint) {
             setEditingPoint(null);
-            (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+            try {
+                (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+            } catch (err) {
+                // ignore
+            }
             return;
         }
 
@@ -308,7 +312,11 @@ const RoomMeasurer: React.FC = () => {
 
         setIsDragging(false);
         setActiveMeasurement(null);
-        (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+        try {
+            (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+        } catch (err) {
+            // ignore
+        }
     };
 
     const getActiveScale = useCallback(() => {

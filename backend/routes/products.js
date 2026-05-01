@@ -20,7 +20,17 @@ router.get('/', async (req, res) => {
             console.log('⚠️ Supabase fetch was empty or failed. Switching to local fallback.');
             throw new Error(error ? error.message : 'No data');
         }
-        data = cloudData;
+        
+        // Merge cloud data with local data if Curtains category is missing
+        const localData = localDb.getProducts();
+        const hasCurtains = cloudData.some(p => p.category === 'Curtains');
+        if (!hasCurtains) {
+            console.log('⚠️ Curtains category missing from Supabase. Merging local curtains catalogue.');
+            const localCurtains = localData.filter(p => p.category === 'Curtains');
+            data = [...cloudData, ...localCurtains];
+        } else {
+            data = cloudData;
+        }
     } catch (dbErr) {
         console.log('🔄 Local fallback triggered. Reason:', dbErr.message);
         try {

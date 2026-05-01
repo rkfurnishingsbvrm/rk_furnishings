@@ -13,7 +13,7 @@ interface Product {
     image?: string;
 }
 
-const CATEGORIES = ['Sofa Fabrics', 'Wallpapers', 'Blinds', 'Carpets & Rugs', 'Mattresses', 'Flooring'];
+const CATEGORIES = ['Curtains', 'Sofa Fabrics', 'Wallpapers', 'Blinds', 'Carpets & Rugs', 'Mattresses', 'Flooring'];
 
 export const InfiniteGallery = () => {
     const [products, setProducts] = useState<Product[]>([]);
@@ -27,8 +27,7 @@ export const InfiniteGallery = () => {
 
                 
                 if (data && data.length > 0) {
-                    const filtered = data.filter((p: any) => p.category !== 'Curtains');
-                    setProducts(filtered.map((p: { id: string, _id: string, name: string, category: string, description: string, images?: string[], image?: string }) => ({
+                    setProducts(data.map((p: { id: string, _id: string, name: string, category: string, description: string, images?: string[], image?: string }) => ({
                         id: p.id || p._id,
                         name: p.name,
                         category: p.category,
