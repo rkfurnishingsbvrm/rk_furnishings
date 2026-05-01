@@ -16,10 +16,8 @@ const AdminDashboard: React.FC = () => {
   }, []);
 
   const stats = [
-    { label: 'Total Revenue', value: '₹12.4L', icon: TrendingUp, color: 'text-green-500' },
     { label: 'Active Curtains', value: '124', icon: Package, color: 'text-gold' },
     { label: 'Total Stylists', value: '12', icon: Users, color: 'text-blue-500' },
-    { label: 'Open Orders', value: '45', icon: ShoppingCart, color: 'text-purple-500' }
   ];
 
   const mockInventory = [
@@ -40,7 +38,6 @@ const AdminDashboard: React.FC = () => {
             {[
                 { id: 'dashboard', label: 'Dashboard', icon: LayoutGrid },
                 { id: 'inventory', label: 'Inventory', icon: Package },
-                { id: 'orders', label: 'Orders', icon: ShoppingCart },
                 { id: 'users', label: 'Stylists', icon: Users },
             ].map(item => (
                 <button 

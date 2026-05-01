@@ -21,58 +21,14 @@ export const useAuthStore = create<AuthState>()(
   )
 );
 
-interface CartItem {
-  id: string;
-  name: string;
-  image: string;
-  price: number;
-  quantity: number;
-  category?: string;
-}
-
-interface CartState {
-  items: CartItem[];
-  addItem: (item: Omit<CartItem, 'quantity'>) => void;
-  removeItem: (id: string) => void;
-  clearCart: () => void;
-}
-
-export const useCartStore = create<CartState>()(
-  persist(
-    (set, get) => ({
-      items: [],
-      addItem: (item) => {
-        const items = get().items;
-        const existing = items.find((i) => i.id === item.id);
-        if (existing) {
-          set({
-            items: items.map((i) =>
-              i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-            ),
-          });
-        } else {
-          set({ items: [...items, { ...item, quantity: 1 }] });
-        }
-      },
-      removeItem: (id) => set({ items: get().items.filter((i) => i.id !== id) }),
-      clearCart: () => set({ items: [] }),
-    }),
-    { name: 'rk-cart-storage' }
-  )
-);
-
 interface UIState {
   isAuthOpen: boolean;
-  isCartOpen: boolean;
   toggleAuth: (open?: boolean) => void;
-  toggleCart: (open?: boolean) => void;
 }
 
 export const useUIStore = create<UIState>((set) => ({
   isAuthOpen: false,
-  isCartOpen: false,
   toggleAuth: (open) => set((state) => ({ isAuthOpen: open ?? !state.isAuthOpen })),
-  toggleCart: (open) => set((state) => ({ isCartOpen: open ?? !state.isCartOpen })),
 }));
 
 interface ShowroomState {

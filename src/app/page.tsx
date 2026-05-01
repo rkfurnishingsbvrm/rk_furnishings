@@ -14,15 +14,14 @@ import LocationSection from '@/components/LocationSection';
 import ServicesSection from '@/components/ServicesSection';
 import BlogSection from '@/components/BlogSection';
 import { ArrowDown, Instagram, Facebook, Phone, Mail, Play, Pause, ShoppingCart, User as UserIcon, LogOut, Sparkles } from 'lucide-react';
-import { useUIStore, useAuthStore, useCartStore } from '@/store/useStore';
+import { useUIStore, useAuthStore } from '@/store/useStore';
 import { API_BASE_URL } from "@/lib/config";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [showGame, setShowGame] = useState(false);
-  const { toggleAuth, toggleCart } = useUIStore();
+  const { toggleAuth } = useUIStore();
   const { user, logout } = useAuthStore();
-  const cartItems = useCartStore(state => state.items);
 
   const [businessSettings, setBusinessSettings] = useState({
     contactNumber: "8688769487",
@@ -85,17 +84,7 @@ export default function Home() {
               </Link>
 
               <div className="flex items-center gap-8 pl-8 border-l border-gray-100">
-                <button
-                  onClick={() => toggleCart(true)}
-                  className="relative p-2 text-charcoal hover:text-gold transition-colors"
-                >
-                  <ShoppingCart className="w-5 h-5" />
-                  {mounted && cartItems.length > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-gold text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center border-2 border-white">
-                      {cartItems.length}
-                    </span>
-                  )}
-                </button>
+
 
                 {mounted && (user ? (
                   <div className="flex items-center gap-4 group relative">

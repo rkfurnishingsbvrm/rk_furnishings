@@ -6,7 +6,6 @@ const PRODUCTS_FILE = path.join(DATA_DIR, 'products.json');
 const BLOG_FILE = path.join(DATA_DIR, 'blog.json');
 const CONSULTATIONS_FILE = path.join(DATA_DIR, 'consultations.json');
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
-const ORDERS_FILE = path.join(DATA_DIR, 'orders.json');
 const SETTINGS_FILE = path.join(DATA_DIR, 'settings.json');
 
 // Ensure data directory exists
@@ -50,6 +49,4 @@ module.exports = {
     saveSettings: (settings) => writeData(SETTINGS_FILE, settings),
     getUsers: () => readData(USERS_FILE, []),
     saveUsers: (users) => writeData(USERS_FILE, users),
-    getOrders: () => readData(ORDERS_FILE, []),
-    saveOrders: (orders) => writeData(ORDERS_FILE, orders),
 };

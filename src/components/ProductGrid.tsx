@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Star, ChevronRight, Info, Sparkles } from 'lucide-react';
 import { API_BASE_URL } from '@/lib/config';
 
-import { useStore, useCartStore } from '@/store/useStore';
+import { useStore } from '@/store/useStore';
 import FlowingMenu from './FlowingMenu';
 
 
@@ -65,7 +65,7 @@ const ProductGrid = () => {
     const [visibleCount, setVisibleCount] = useState(12);
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-    const addItem = useCartStore((state) => state.addItem);
+
 
     const generateMockProducts = useMemo(() => {
         const items: Product[] = [];
@@ -307,20 +307,7 @@ const ProductGrid = () => {
                                 </div>
 
                                 <div className="flex flex-col gap-3">
-                                    <button
-                                        onClick={() => {
-                                            addItem({
-                                                id: selectedProduct._id,
-                                                name: selectedProduct.name,
-                                                image: selectedProduct.images[0],
-                                                price: selectedProduct.price
-                                            });
-                                            setSelectedProduct(null);
-                                        }}
-                                        className="bg-charcoal text-white py-5 font-black uppercase tracking-[0.4em] text-[10px] hover:bg-gold transition-all shadow-xl"
-                                    >
-                                        Add to Collection ✦
-                                    </button>
+
                                     
                                     <div className="grid grid-cols-2 gap-3">
                                          <a 
