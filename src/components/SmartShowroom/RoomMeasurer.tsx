@@ -667,21 +667,34 @@ const RoomMeasurer: React.FC = () => {
                                                 </button>
                                             </div>
                                             
-                                            {/* Sync Input for Calibration */}
                                             <div className="flex items-center gap-2 pt-2 border-t border-white/5">
                                                 <Target className="w-3 h-3 text-gold/40" />
-                                                <input 
-                                                    type="number" 
-                                                    placeholder="Sync real cm..." 
-                                                    className="bg-black/20 border border-white/5 rounded-lg px-3 py-1.5 text-[10px] w-full outline-none focus:border-gold/50 transition-all"
-                                                    onKeyDown={(e) => {
-                                                        if (e.key === 'Enter') {
-                                                            calibrateMeasurement(m.id, parseFloat((e.target as HTMLInputElement).value));
-                                                            (e.target as HTMLInputElement).value = '';
-                                                            alert("System Calibrated. All measurements updated.");
-                                                        }
-                                                    }}
-                                                />
+                                                <div className="flex-1 relative">
+                                                    <input 
+                                                        type="number" 
+                                                        id={`sync-input-${m.id}`}
+                                                        placeholder="Enter real size (cm)..." 
+                                                        className="bg-black/20 border border-white/5 rounded-lg px-3 py-1.5 text-[10px] w-full outline-none focus:border-gold/50 transition-all pr-14"
+                                                        onKeyDown={(e) => {
+                                                            if (e.key === 'Enter') {
+                                                                calibrateMeasurement(m.id, parseFloat((e.target as HTMLInputElement).value));
+                                                                (e.target as HTMLInputElement).value = '';
+                                                            }
+                                                        }}
+                                                    />
+                                                    <button 
+                                                        onClick={() => {
+                                                            const input = document.getElementById(`sync-input-${m.id}`) as HTMLInputElement;
+                                                            if (input && input.value) {
+                                                                calibrateMeasurement(m.id, parseFloat(input.value));
+                                                                input.value = '';
+                                                            }
+                                                        }}
+                                                        className="absolute right-1 top-1/2 -translate-y-1/2 bg-gold/10 hover:bg-gold text-gold hover:text-white px-2 py-1 rounded text-[7px] font-black uppercase transition-all border border-gold/20"
+                                                    >
+                                                        Sync
+                                                    </button>
+                                                </div>
                                                 <button 
                                                     onClick={() => {
                                                         if (aiResult?.scale_info.pixels_per_cm) {
