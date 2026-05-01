@@ -101,6 +101,9 @@ const RoomVisualizer: React.FC = () => {
             console.warn("Backend detection offline, falling back to manual adjustment.", err);
         } finally {
             setIsProcessing(false);
+            if (activeWallpaper) {
+                addWallpaperToCanvas(activeWallpaper.img);
+            }
         }
       };
       reader.readAsDataURL(file);
