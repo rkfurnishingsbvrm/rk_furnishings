@@ -25,8 +25,8 @@ export default function Home() {
   const cartItems = useCartStore(state => state.items);
 
   const [businessSettings, setBusinessSettings] = useState({
-    contactNumber: "+91 98765 43210",
-    supportEmail: "hello@rkf.com"
+    contactNumber: "8688769487",
+    supportEmail: "rkfurnishingsbvrm@gmail.com"
   });
 
   useEffect(() => {
@@ -37,8 +37,8 @@ export default function Home() {
         if (res.ok) {
           const data = await res.json();
           setBusinessSettings({
-            contactNumber: data.contactNumber || "+91 98765 43210",
-            supportEmail: data.supportEmail || "hello@rkf.com"
+            contactNumber: data.contactNumber || "8688769487",
+            supportEmail: data.supportEmail || "rkfurnishingsbvrm@gmail.com"
           });
         }
       } catch (err) {
@@ -293,24 +293,24 @@ export default function Home() {
           </div>
 
           <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto border-t border-white/10 pt-16">
-            <div className="flex flex-col items-center gap-6 group cursor-pointer">
-              <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center border border-white/10 group-hover:border-gold group-hover:bg-gold/10 transition-all duration-500">
+            <a href={`tel:${businessSettings.contactNumber}`} className="flex flex-col items-center gap-6 group cursor-pointer transition-all">
+              <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center border border-white/10 group-hover:border-gold group-hover:bg-gold/10 transition-all duration-500 transform group-hover:scale-110">
                 <Phone className="text-gold w-10 h-10" />
               </div>
               <div className="text-center">
                 <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold mb-2">Speak With Us</p>
-                <span className="text-3xl font-serif text-white">{businessSettings.contactNumber}</span>
+                <span className="text-3xl font-serif text-white group-hover:text-gold transition-colors">{businessSettings.contactNumber}</span>
               </div>
-            </div>
-            <div className="flex flex-col items-center gap-6 group cursor-pointer">
-              <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center border border-white/10 group-hover:border-gold group-hover:bg-gold/10 transition-all duration-500">
+            </a>
+            <a href={`mailto:${businessSettings.supportEmail}`} className="flex flex-col items-center gap-6 group cursor-pointer transition-all">
+              <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center border border-white/10 group-hover:border-gold group-hover:bg-gold/10 transition-all duration-500 transform group-hover:scale-110">
                 <Mail className="text-gold w-10 h-10" />
               </div>
               <div className="text-center">
                 <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold mb-2">Email Inquiries</p>
-                <span className="text-3xl font-serif text-white">{businessSettings.supportEmail}</span>
+                <span className="text-3xl font-serif text-white group-hover:text-gold transition-colors">{businessSettings.supportEmail}</span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
