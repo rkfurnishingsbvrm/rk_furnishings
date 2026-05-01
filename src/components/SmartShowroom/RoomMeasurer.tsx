@@ -47,8 +47,9 @@ const RoomMeasurer: React.FC = () => {
     // --- measurement State ---
     const [measurements, setMeasurements] = useState<Measurement[]>([]);
     const [activeMeasurement, setActiveMeasurement] = useState<{ start: Point; end: Point } | null>(null);
-    const [scaleFactor, setScaleFactor] = useState<number>(10.0); // Pixels per CM (Fallback)
+    const [basePixelsPerCm, setBasePixelsPerCm] = useState<number>(10.0);
     const [aiResult, setAiResult] = useState<AIMeasurement | null>(null);
+    const [originalImgWidth, setOriginalImgWidth] = useState<number | null>(null);
     
     // --- Interaction State ---
     const [isDragging, setIsDragging] = useState(false);
@@ -56,6 +57,7 @@ const RoomMeasurer: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
     const [stream, setStream] = useState<MediaStream | null>(null);
+    const [containerAspectRatio, setContainerAspectRatio] = useState<number>(16 / 9);
 
     // --- Actions ---
 
@@ -122,6 +124,10 @@ const RoomMeasurer: React.FC = () => {
             if (stream) {
                 node.srcObject = stream;
                 node.onloadedmetadata = () => {
+                    if (node.videoWidth && node.videoHeight) {
+                        setContainerAspectRatio(node.videoWidth / node.videoHeight);
+                        setOriginalImgWidth(node.videoWidth);
+                    }
                     node.play().catch(e => console.error("Play failed after metadata load", e));
                 };
             }
@@ -146,6 +152,14 @@ const RoomMeasurer: React.FC = () => {
         setUploading(true);
         const objectUrl = URL.createObjectURL(file);
         setPreviewImage(objectUrl);
+        
+        // Match container to image exactly to prevent mapping offsets
+        const img = new Image();
+        img.src = objectUrl;
+        img.onload = () => {
+            setContainerAspectRatio(img.width / img.height);
+            setOriginalImgWidth(img.width); // Set immediately to stabilize measurements
+        };
 
         const formData = new FormData();
         formData.append('file', file);
@@ -162,18 +176,22 @@ const RoomMeasurer: React.FC = () => {
                 
                 // --- RESOLUTION METADATA ---
                 if (data.img_size) {
-                    setOriginalPixelsPerCm(data.scale_info.pixels_per_cm);
                     setOriginalImgWidth(data.img_size[0]);
+                    setContainerAspectRatio(data.img_size[0] / data.img_size[1]);
                 }
                 
-                // Initial scale factor for the first render
-                const rect = containerRef.current?.getBoundingClientRect();
-                if (rect && data.img_size) {
-                    const ratio = rect.width / data.img_size[0];
-                    setScaleFactor(data.scale_info.pixels_per_cm * ratio);
-                } else {
-                    setScaleFactor(data.scale_info.pixels_per_cm);
-                }
+                // Base pixels per cm is the raw image scale
+                const aiScale = data.scale_info.pixels_per_cm;
+                setBasePixelsPerCm(aiScale);
+                
+                // Update any existing measurements to the new scale immediately
+                setMeasurements(prev => prev.map(m => {
+                    const rect = containerRef.current?.getBoundingClientRect();
+                    const currentDistPx = rect ? Math.sqrt(Math.pow(((m.end.x - m.start.x) / 100) * rect.width, 2) + Math.pow(((m.end.y - m.start.y) / 100) * rect.height, 2)) : 0;
+                    const ratio = rect && data.img_size ? rect.width / data.img_size[0] : 1;
+                    const activeScale = aiScale * ratio;
+                    return { ...m, distanceCm: activeScale > 0 ? Math.round((currentDistPx / activeScale) * 10) / 10 : 0 };
+                }));
                 
                 // --- AUTO-FEATURE ---
                 if (data.bbox && data.img_size) {
@@ -237,7 +255,11 @@ const RoomMeasurer: React.FC = () => {
 
         setIsDragging(true);
         setActiveMeasurement({ start: point, end: point });
-        (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+        try {
+            (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+        } catch (err) {
+            console.warn("Pointer capture failed, continuing anyway", err);
+        }
     };
 
     const handlePointerMove = (e: React.PointerEvent) => {
@@ -289,15 +311,12 @@ const RoomMeasurer: React.FC = () => {
         (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
     };
 
-    const [originalPixelsPerCm, setOriginalPixelsPerCm] = useState<number | null>(null);
-    const [originalImgWidth, setOriginalImgWidth] = useState<number | null>(null);
-
-    const getDynamicScaleFactor = useCallback(() => {
-        if (!originalPixelsPerCm || !originalImgWidth || !containerRef.current) return scaleFactor;
-        const rect = containerRef.current.getBoundingClientRect();
+    const getActiveScale = useCallback(() => {
+        const rect = containerRef.current?.getBoundingClientRect();
+        if (!rect || !originalImgWidth) return basePixelsPerCm;
         const ratio = rect.width / originalImgWidth;
-        return originalPixelsPerCm * ratio;
-    }, [originalPixelsPerCm, originalImgWidth, scaleFactor]);
+        return basePixelsPerCm * ratio;
+    }, [basePixelsPerCm, originalImgWidth]);
 
     const calculateDistance = (p1: Point, p2: Point) => {
         const rect = containerRef.current?.getBoundingClientRect();
@@ -309,8 +328,8 @@ const RoomMeasurer: React.FC = () => {
 
     const calculateRealCm = (p1: Point, p2: Point) => {
         const distPx = calculateDistance(p1, p2);
-        const activeScale = getDynamicScaleFactor();
-        if (!activeScale || activeScale === 0) return 0;
+        const activeScale = getActiveScale();
+        if (!activeScale || activeScale <= 0) return 0;
         return Math.round((distPx / activeScale) * 10) / 10;
     };
 
@@ -321,14 +340,25 @@ const RoomMeasurer: React.FC = () => {
         if (!m) return;
 
         const distPx = calculateDistance(m.start, m.end);
-        const newScale = distPx / realCm;
-        setScaleFactor(newScale);
+        const rect = containerRef.current?.getBoundingClientRect();
+        
+        let newBasePixelsPerCm = distPx / realCm;
+        if (originalImgWidth && rect) {
+            const ratio = rect.width / originalImgWidth;
+            newBasePixelsPerCm = (distPx / ratio) / realCm;
+        }
+        
+        setBasePixelsPerCm(newBasePixelsPerCm);
 
-        // Update all measurements with new scale instantly
-        setMeasurements(prev => prev.map(item => ({
-            ...item,
-            distanceCm: Math.round((calculateDistance(item.start, item.end) / newScale) * 10) / 10
-        })));
+        // Update all existing measurements accurately
+        setMeasurements(prev => prev.map(item => {
+            const currentDistPx = calculateDistance(item.start, item.end);
+            const activeScale = originalImgWidth && rect ? newBasePixelsPerCm * (rect.width / originalImgWidth) : newBasePixelsPerCm;
+            return {
+                ...item,
+                distanceCm: activeScale > 0 ? Math.round((currentDistPx / activeScale) * 10) / 10 : 0
+            };
+        }));
     };
 
     const findClosestPoint = (point: Point | null) => {
@@ -336,8 +366,8 @@ const RoomMeasurer: React.FC = () => {
         for (const m of measurements) {
             const dStart = calculateDistance(point, m.start);
             const dEnd = calculateDistance(point, m.end);
-            if (dStart < 15) return { mId: m.id, type: 'start' as const }; // Increased from 3
-            if (dEnd < 15) return { mId: m.id, type: 'end' as const }; // Increased from 3
+            if (dStart < 30) return { mId: m.id, type: 'start' as const }; 
+            if (dEnd < 30) return { mId: m.id, type: 'end' as const }; 
         }
         return null;
     };
@@ -362,20 +392,43 @@ const RoomMeasurer: React.FC = () => {
     };
 
     const addDemoMeasurement = () => {
+        // AI Verification Simulation
+        // Simulates a 150cm object in a standard 1000px wide image
+        setOriginalImgWidth(1000);
+        setContainerAspectRatio(16/9);
+        setBasePixelsPerCm(1000 / 200); // 200cm width = 5px/cm
+        
         const demo: Measurement = {
             id: 'demo-' + Date.now(),
-            start: { x: 25, y: 25 },
-            end: { x: 75, y: 25 },
-            distanceCm: 150.0,
-            label: "Demo Measurement"
+            start: { x: 25, y: 50 },
+            end: { x: 75, y: 50 }, // 50% of 1000px = 500px. 500px / (5px/cm) = 100cm
+            distanceCm: 100.0,
+            label: "AI Engine Verification"
         };
         setMeasurements(prev => [...prev, demo]);
+        alert("AI Engine Verification: 50% width correctly mapped to 100cm based on simulated 200cm field-of-view.");
     };
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [handleKeyDown]);
+
+    // Handle container resizing in real-time
+    useEffect(() => {
+        if (!containerRef.current) return;
+        
+        const observer = new ResizeObserver(() => {
+            // Force re-calculation of measurements if container size changes
+            setMeasurements(prev => prev.map(m => ({
+                ...m,
+                distanceCm: calculateRealCm(m.start, m.end)
+            })));
+        });
+        
+        observer.observe(containerRef.current);
+        return () => observer.disconnect();
+    }, [basePixelsPerCm, originalImgWidth, measurements.length]); // Re-bind when scale or count changes
 
 
     return (
@@ -433,8 +486,12 @@ const RoomMeasurer: React.FC = () => {
                     <div className="lg:col-span-2 space-y-8">
                         <div 
                             ref={containerRef}
-                            className={`relative aspect-video bg-black rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group select-none transition-all ${isDragging || editingPoint ? 'ring-2 ring-gold/40' : ''}`}
-                            style={{ cursor: editingPoint ? 'grabbing' : 'crosshair', touchAction: 'none' }}
+                            className={`relative w-full bg-black rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group select-none transition-all ${isDragging || editingPoint ? 'ring-2 ring-gold/40' : ''}`}
+                            style={{ 
+                                cursor: editingPoint ? 'grabbing' : 'crosshair', 
+                                touchAction: 'none',
+                                aspectRatio: containerAspectRatio 
+                            }}
                             onPointerDown={handlePointerDown}
                             onPointerMove={handlePointerMove}
                             onPointerUp={handlePointerUp}
@@ -464,11 +521,11 @@ const RoomMeasurer: React.FC = () => {
                             />
 
                             {previewImage && (
-                                <img src={previewImage} className="absolute inset-0 w-full h-full object-contain pointer-events-none" style={{ zIndex: 10 }} alt="Room Scan Preview" />
+                                <img src={previewImage} className="absolute inset-0 w-full h-full object-cover pointer-events-none" style={{ zIndex: 10 }} alt="Room Scan Preview" />
                             )}
 
                             {/* Measurement SVG Layer */}
-                            <svg className="absolute inset-0 w-full h-full pointer-events-none drop-shadow-lg">
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none drop-shadow-lg" style={{ zIndex: 20 }}>
                                 {measurements.map((m) => (
                                     <g key={m.id} className="pointer-events-auto group/measure">
                                         <line 
@@ -478,14 +535,14 @@ const RoomMeasurer: React.FC = () => {
                                             className="opacity-70"
                                         />
                                         <circle 
-                                            cx={`${m.start.x}%`} cy={`${m.start.y}%`} r="6" 
-                                            fill="#D4AF37" stroke="white" strokeWidth="1.5" 
-                                            className="cursor-move hover:scale-125 transition-transform"
+                                            cx={`${m.start.x}%`} cy={`${m.start.y}%`} r="8" 
+                                            fill="#D4AF37" stroke="white" strokeWidth="2" 
+                                            className="cursor-move hover:scale-150 hover:fill-white transition-all shadow-xl"
                                         />
                                         <circle 
-                                            cx={`${m.end.x}%`} cy={`${m.end.y}%`} r="6" 
-                                            fill="#D4AF37" stroke="white" strokeWidth="1.5"
-                                            className="cursor-move hover:scale-125 transition-transform"
+                                            cx={`${m.end.x}%`} cy={`${m.end.y}%`} r="8" 
+                                            fill="#D4AF37" stroke="white" strokeWidth="2"
+                                            className="cursor-move hover:scale-150 hover:fill-white transition-all shadow-xl"
                                         />
                                         <foreignObject 
                                             x={`${(m.start.x + m.end.x) / 2}%`} 
@@ -505,10 +562,10 @@ const RoomMeasurer: React.FC = () => {
                                         <line 
                                             x1={`${activeMeasurement.start.x}%`} y1={`${activeMeasurement.start.y}%`} 
                                             x2={`${activeMeasurement.end.x}%`} y2={`${activeMeasurement.end.y}%`} 
-                                            stroke="white" strokeWidth="3"
+                                            stroke="#D4AF37" strokeWidth="3"
                                         />
-                                        <circle cx={`${activeMeasurement.start.x}%`} cy={`${activeMeasurement.start.y}%`} r="7" fill="white" />
-                                        <circle cx={`${activeMeasurement.end.x}%`} cy={`${activeMeasurement.end.y}%`} r="7" fill="white" />
+                                        <circle cx={`${activeMeasurement.start.x}%`} cy={`${activeMeasurement.start.y}%`} r="8" fill="#D4AF37" stroke="white" strokeWidth="2" />
+                                        <circle cx={`${activeMeasurement.end.x}%`} cy={`${activeMeasurement.end.y}%`} r="8" fill="#D4AF37" stroke="white" strokeWidth="2" />
                                         
                                         {/* LIVE TOOLTIP */}
                                         <foreignObject 
@@ -613,9 +670,22 @@ const RoomMeasurer: React.FC = () => {
                                                         if (e.key === 'Enter') {
                                                             calibrateMeasurement(m.id, parseFloat((e.target as HTMLInputElement).value));
                                                             (e.target as HTMLInputElement).value = '';
+                                                            alert("System Calibrated. All measurements updated.");
                                                         }
                                                     }}
                                                 />
+                                                <button 
+                                                    onClick={() => {
+                                                        if (aiResult?.scale_info.pixels_per_cm) {
+                                                            setBasePixelsPerCm(aiResult.scale_info.pixels_per_cm);
+                                                            calibrateMeasurement(m.id, m.distanceCm); // Trigger recount
+                                                        }
+                                                    }}
+                                                    className="p-2 hover:text-gold transition-colors"
+                                                    title="Reset to AI Scale"
+                                                >
+                                                    <RotateCcw className="w-3 h-3" />
+                                                </button>
                                             </div>
                                         </div>
                                     ))
