@@ -27,11 +27,7 @@ const categoriesList = ['Curtains', 'Sofa Fabrics', 'Wallpapers', 'Blinds', 'Car
 const swatchColors = ['#AF8B44', '#2C2C2C', '#E5E4E2', '#C0C0C0', '#4169E1', '#800000', '#2E8B57'];
 
 const categoryImages = {
-    'Curtains': [
-        '/images/curtains.png',
-        '/images/curtains/1.jpeg',
-        '/images/curtains.png'
-    ],
+    'Curtains': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map(id => `/images/curtains/${id}.jpeg`),
     'Sofa Fabrics': [
         '/images/sofa.png',
         '/images/premium/sofa_1.png',

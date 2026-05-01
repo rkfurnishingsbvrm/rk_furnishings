@@ -6,7 +6,6 @@ import { Sparkles, Box, Layout, ArrowRight, Share2, ZoomIn, Info, Play, MessageC
 import { API_BASE_URL } from '@/lib/config';
 import AIRoomAnalysis from '@/components/SmartShowroom/AIRoomAnalysis';
 import RoomMeasurer from '@/components/SmartShowroom/RoomMeasurer';
-import ARViewer from '@/components/SmartShowroom/ARViewer';
 import RoomVisualizer from '@/components/SmartShowroom/RoomVisualizer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import CustomCursor from '@/components/CustomCursor';
@@ -21,68 +20,7 @@ const fadeInUp: any = {
 };
 
 const SmartShowroomPage: React.FC = () => {
-    const [arProducts, setArProducts] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
     const [isChatOpen, setIsChatOpen] = useState(false);
-
-    useEffect(() => {
-        const fetchArProducts = async () => {
-            try {
-                const response = await fetch(`${API_BASE_URL}/products`);
-                const data = await response.json();
-                
-                const mappedProducts = data.slice(0, 100).map((p: { id: string, name: string, category: string, images?: string[], description?: string }, i: number) => {
-                    const isFabricBased = p.category === 'Wallpapers' || p.category === 'Sofa Fabrics' || p.category === 'Blinds' || p.category === 'Curtains';
-                    
-                    const displayModel = isFabricBased 
-                        ? "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoxTextured/glTF-Binary/BoxTextured.glb"
-                        : "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb";
-
-                    return {
-                        id: p.id,
-                        name: p.name,
-                        category: p.category,
-                        url: displayModel,
-                        poster: undefined, // Removing all images as requested
-                        desc: p.description || `Signature ${p.category} piece crafted for elegance across Bhimavaram interiors.`,
-                        placement: isFabricBased ? 'wall' : 'floor'
-                    };
-                });
-                setArProducts(mappedProducts);
-            } catch (err) {
-                console.error('Error fetching AR products:', err);
-                // Fallback to mock products if API is offline
-                const fallbackData = Array.from({length: 12}, (_, i) => ({
-                    id: `mock-ar-${i}`,
-                    name: `Signature Collection ${i + 1}`,
-                    category: i % 2 === 0 ? 'Wallpapers' : 'Sofa Fabrics',
-                    description: 'A premium selection for your modern home.',
-                    images: [i % 2 === 0 ? '/images/wallpaper.png' : '/images/sofa.png']
-                }));
-                
-                const mappedProducts = fallbackData.map((p, i) => {
-                    const isFabricBased = p.category === 'Wallpapers' || p.category === 'Sofa Fabrics' || p.category === 'Blinds' || p.category === 'Curtains';
-                    const displayModel = isFabricBased 
-                        ? "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoxTextured/glTF-Binary/BoxTextured.glb"
-                        : "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb";
-
-                    return {
-                        id: p.id,
-                        name: p.name,
-                        category: p.category,
-                        url: displayModel,
-                        poster: undefined, // Removing all images as requested
-                        desc: p.description,
-                        placement: isFabricBased ? 'wall' : 'floor'
-                    };
-                });
-                setArProducts(mappedProducts);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchArProducts();
-    }, []);
 
     return (
         <main className="min-h-screen bg-[#fafafa] relative overflow-hidden">
@@ -216,69 +154,6 @@ const SmartShowroomPage: React.FC = () => {
                 <RoomVisualizer />
             </div>
 
-            {/* AR Product Catalog */}
-            <section className="py-44 bg-white relative">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24">
-                        <div className="max-w-xl">
-                            <span className="text-gold font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">Interactive Library</span>
-                            <h2 className="text-5xl md:text-8xl font-serif text-charcoal leading-tight">Master <br/><span className="text-gold italic font-medium">Assets</span></h2>
-                        </div>
-                        <div className="flex items-center gap-6 pb-4">
-                            <div className="text-right">
-                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest mb-1 italic">V2.0 Engine</p>
-                                <p className="text-xs font-bold text-charcoal">Synced with Bhimavaram Inventory</p>
-                            </div>
-                            <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center bg-gray-50 text-gold animate-pulse">
-                                <Box className="w-6 h-6" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                        {loading ? (
-                            Array.from({ length: 6 }).map((_, i) => (
-                                <div key={i} className="aspect-[4/5] bg-gray-50 animate-pulse rounded-3xl" />
-                            ))
-                        ) : (
-                            arProducts.map((product) => (
-                                <motion.div 
-                                    key={product.id}
-                                    {...fadeInUp}
-                                    className="bg-white p-8 rounded-[40px] border border-gray-50 shadow-xl group hover:shadow-2xl transition-all"
-                                >
-                                    <ARViewer 
-                                        modelUrl={product.url} 
-                                        name={product.name} 
-                                        placement={product.placement} 
-                                    />
-                                    <div className="mt-10 space-y-4">
-                                        <div className="flex justify-between items-start">
-                                            <div>
-                                                <p className="text-[10px] font-black uppercase text-gold tracking-widest mb-2">{product.category}</p>
-                                                <h3 className="text-2xl font-serif text-charcoal italic">{product.name}</h3>
-                                            </div>
-                                            <div className="h-10 w-10 rounded-full border border-gray-100 flex items-center justify-center text-gray-300 group-hover:text-gold transition-colors">
-                                                <Share2 className="w-4 h-4" />
-                                            </div>
-                                        </div>
-                                        <p className="text-xs text-gray-400 leading-relaxed italic">{product.desc}</p>
-                                        <div className="pt-6 border-t border-gray-50 flex items-center justify-between">
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-2 h-2 rounded-full bg-green-500" />
-                                                <span className="text-[9px] font-black uppercase text-gray-500 tracking-tighter">Ready for AR</span>
-                                            </div>
-                                            <button className="text-[9px] font-black uppercase tracking-widest text-charcoal flex items-center gap-2 group-hover:text-gold transition-colors">
-                                                Details <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            ))
-                        )}
-                    </div>
-                </div>
-            </section>
 
 
             <footer className="py-20 bg-black text-white/20 border-t border-white/5 text-center">

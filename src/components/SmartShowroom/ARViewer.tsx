@@ -35,7 +35,7 @@ const ARViewer: React.FC<ARViewerProps> = ({ modelUrl, poster, alt, name, placem
         camera-controls
         touch-action="pan-y"
         ar-placement={placement}
-        poster={poster} // Still pass if available, but optional
+        {...(poster ? { poster } : {})}
         alt={alt || "3D Product Preview"}
         className="w-full h-full bg-transparent"
         style={{ '--poster-color': 'transparent' }}
