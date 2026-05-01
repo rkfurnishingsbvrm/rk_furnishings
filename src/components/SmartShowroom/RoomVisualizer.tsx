@@ -9,9 +9,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 const WALLPAPER_LIST = [
   { id: 1, name: 'Royal Gold Damask', img: '/images/wallpaper.png' },
   { id: 2, name: 'Minimalist Textured Grey', img: '/images/premium/wallpaper_1.png' },
-  ...Array.from({ length: 10 }, (_, i) => ({
+  ...Array.from({ length: 20 }, (_, i) => ({
     id: i + 3,
-    name: `E-Joy Series ${i + 1}`,
+    name: `E-Joy Collection ${i + 1}`,
     img: `/images/wallpapers/wallpaper_${i + 1}.jpeg`
   }))
 ];
@@ -184,9 +184,10 @@ const RoomVisualizer: React.FC = () => {
                                 activeWallpaper.id === c.id ? 'bg-charcoal border-gold shadow-2xl' : 'bg-transparent border-gray-50 hover:border-gray-100'
                             }`}
                         >
-                            <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center border-2 border-transparent group-hover:border-gold/30 transition-all">
-                                <Layers className="w-6 h-6 text-charcoal/20" />
-                            </div>
+                            <div 
+                                className="w-14 h-14 rounded-xl bg-gray-100 border-2 border-transparent group-hover:border-gold/30 transition-all overflow-hidden bg-cover bg-center shadow-inner"
+                                style={{ backgroundImage: `url(${c.img})` }}
+                            />
                             <div className="text-left">
                                 <p className={`text-[9px] font-black uppercase tracking-widest ${activeWallpaper.id === c.id ? 'text-gold' : 'text-gray-400'}`}>Premium Series</p>
                                 <p className={`text-[11px] font-bold ${activeWallpaper.id === c.id ? 'text-white' : 'text-charcoal'}`}>{c.name}</p>
