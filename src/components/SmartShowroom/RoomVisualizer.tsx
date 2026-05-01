@@ -165,11 +165,11 @@ const RoomVisualizer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
             <div className="max-w-2xl">
-                <span className="text-gold font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">Visual Recognition Suite v2.0</span>
-                <h2 className="text-6xl font-serif text-charcoal italic mb-6">Reality <span className="not-italic font-sans font-light opacity-30">Designer</span></h2>
+                <span className="text-gold font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">Interactive Preview Engine</span>
+                <h2 className="text-6xl font-serif text-charcoal italic mb-6">Digital <span className="not-italic font-sans font-light opacity-30">Preview</span></h2>
                 <p className="text-gray-400 font-light leading-relaxed italic">
-                    Our CV Engine detects wall boundaries and lighting depths to project 
-                    your chosen fabric with extreme perspective accuracy.
+                    Visualize our premium wallpaper and fabric collections directly on your walls 
+                    with realistic depth and lighting analysis.
                 </p>
             </div>
             {image && !applied && (
