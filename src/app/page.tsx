@@ -81,6 +81,24 @@ export default function Home() {
                 <Sparkles className="w-3 h-3" /> AI Showroom
               </Link>
 
+              {/* Catalogue Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-600 hover:text-gold transition-all hover:tracking-[0.2em] transition-all font-medium text-sm capitalize flex items-center gap-1 cursor-pointer bg-transparent border-none outline-none">
+                  Catalogue
+                  <span className="text-[8px] transition-transform duration-300 group-hover:rotate-180">▼</span>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-gray-100 rounded-md shadow-2xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all transform scale-95 group-hover:scale-100 p-2 z-[60]">
+                  <a
+                    href="/catalogues/bloomecat.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 text-[10px] font-black uppercase tracking-widest text-gray-700 hover:bg-gold/10 hover:text-gold transition-colors rounded-sm"
+                  >
+                    Castle Collection
+                  </a>
+                </div>
+              </div>
+
               {mounted && user && (
                 <div className="flex items-center gap-8 pl-8 border-l border-gray-100">
                   <div className="flex items-center gap-4 group relative">
