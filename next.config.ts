@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         hostname: '*.supabase.co',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.pinimg.com',
+        pathname: '/**',
+      },
     ],
   },
   typescript: {
