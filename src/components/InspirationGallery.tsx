@@ -38,10 +38,10 @@ const InspirationGallery = () => {
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 z-30">
                         <span className="text-gold text-xs uppercase tracking-widest mb-2 font-bold">{item.category}</span>
                         <h3 className="text-white text-3xl font-serif mb-6">{item.title}</h3>
-                        <button className="flex items-center gap-3 text-white font-bold text-sm" suppressHydrationWarning>
+                        <div className="flex items-center gap-3 text-white font-bold text-sm cursor-pointer">
                             <Plus className="w-5 h-5" />
                             <span>View Details</span>
-                        </button>
+                        </div>
                     </div>
                 </motion.div>
             ))}

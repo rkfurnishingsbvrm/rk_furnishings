@@ -35,9 +35,9 @@ const BlogSection = () => {
                         <div className="w-20 h-1 bg-gold mb-6"></div>
                         <p className="text-gray-500 text-lg">Helpful tips and trends from our interior styling experts.</p>
                     </div>
-                    <button className="hidden md:block border-2 border-charcoal text-charcoal px-8 py-3 font-bold hover:bg-charcoal hover:text-white transition-all uppercase tracking-wider text-sm mt-8" suppressHydrationWarning>
+                    <div className="hidden md:block border-2 border-charcoal text-charcoal px-8 py-3 font-bold hover:bg-charcoal hover:text-white transition-all uppercase tracking-wider text-sm mt-8 cursor-pointer text-center">
                         View All Posts
-                    </button>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
