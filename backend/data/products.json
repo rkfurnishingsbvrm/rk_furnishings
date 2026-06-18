@@ -910,306 +910,6 @@
     "id": "local-seed-59"
   },
   {
-    "name": "Elite Blinds Series 1",
-    "category": "Blinds",
-    "description": "Premium blinds from our elite collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": true,
-    "id": "local-seed-60"
-  },
-  {
-    "name": "Contemporary Blinds Series 2",
-    "category": "Blinds",
-    "description": "Premium blinds from our contemporary collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": true,
-    "id": "local-seed-61"
-  },
-  {
-    "name": "Bespoke Blinds Series 3",
-    "category": "Blinds",
-    "description": "Premium blinds from our bespoke collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": true,
-    "id": "local-seed-62"
-  },
-  {
-    "name": "Contemporary Blinds Series 4",
-    "category": "Blinds",
-    "description": "Premium blinds from our contemporary collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": true,
-    "id": "local-seed-63"
-  },
-  {
-    "name": "Modern Blinds Series 5",
-    "category": "Blinds",
-    "description": "Premium blinds from our modern collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": true,
-    "id": "local-seed-64"
-  },
-  {
-    "name": "Modern Blinds Series 6",
-    "category": "Blinds",
-    "description": "Premium blinds from our modern collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": false,
-    "id": "local-seed-65"
-  },
-  {
-    "name": "Vintage Blinds Series 7",
-    "category": "Blinds",
-    "description": "Premium blinds from our vintage collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": false,
-    "id": "local-seed-66"
-  },
-  {
-    "name": "Minimalist Blinds Series 8",
-    "category": "Blinds",
-    "description": "Premium blinds from our minimalist collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": false,
-    "id": "local-seed-67"
-  },
-  {
-    "name": "Minimalist Blinds Series 9",
-    "category": "Blinds",
-    "description": "Premium blinds from our minimalist collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": false,
-    "id": "local-seed-68"
-  },
-  {
-    "name": "Modern Blinds Series 10",
-    "category": "Blinds",
-    "description": "Premium blinds from our modern collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": false,
-    "id": "local-seed-69"
-  },
-  {
-    "name": "Contemporary Blinds Series 11",
-    "category": "Blinds",
-    "description": "Premium blinds from our contemporary collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": false,
-    "id": "local-seed-70"
-  },
-  {
-    "name": "Royal Blinds Series 12",
-    "category": "Blinds",
-    "description": "Premium blinds from our royal collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": false,
-    "id": "local-seed-71"
-  },
-  {
-    "name": "Vintage Blinds Series 13",
-    "category": "Blinds",
-    "description": "Premium blinds from our vintage collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": false,
-    "id": "local-seed-72"
-  },
-  {
-    "name": "Luxury Blinds Series 14",
-    "category": "Blinds",
-    "description": "Premium blinds from our luxury collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": false,
-    "id": "local-seed-73"
-  },
-  {
-    "name": "Bespoke Blinds Series 15",
-    "category": "Blinds",
-    "description": "Premium blinds from our bespoke collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": false,
-    "id": "local-seed-74"
-  },
-  {
-    "name": "Modern Blinds Series 16",
-    "category": "Blinds",
-    "description": "Premium blinds from our modern collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": false,
-    "id": "local-seed-75"
-  },
-  {
-    "name": "Vintage Blinds Series 17",
-    "category": "Blinds",
-    "description": "Premium blinds from our vintage collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": false,
-    "id": "local-seed-76"
-  },
-  {
-    "name": "Classic Blinds Series 18",
-    "category": "Blinds",
-    "description": "Premium blinds from our classic collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Natural",
-      "Standard"
-    ],
-    "is_featured": false,
-    "id": "local-seed-77"
-  },
-  {
-    "name": "Minimalist Blinds Series 19",
-    "category": "Blinds",
-    "description": "Premium blinds from our minimalist collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": false,
-    "id": "local-seed-78"
-  },
-  {
-    "name": "Luxury Blinds Series 20",
-    "category": "Blinds",
-    "description": "Premium blinds from our luxury collection. Designed for aesthetics and longevity.",
-    "images": [
-      "/images/inspiration1.png"
-    ],
-    "materials": "High-grade Composite",
-    "colors": [
-      "Standard",
-      "Natural"
-    ],
-    "is_featured": false,
-    "id": "local-seed-79"
-  },
-  {
     "name": "Classic Flooring Series 1",
     "category": "Flooring",
     "description": "Premium flooring from our classic collection. Designed for aesthetics and longevity.",
@@ -3290,5 +2990,800 @@
     ],
     "is_featured": false,
     "id": "local-seed-233"
+  },
+  {
+    "name": "Royal Wooden Blinds - Design 1",
+    "category": "Blinds",
+    "description": "Exquisite royal wooden blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/1.jpeg"
+    ],
+    "materials": "Wooden",
+    "colors": [
+      "Charcoal",
+      "Walnut"
+    ],
+    "is_featured": true,
+    "id": "local-blind-1"
+  },
+  {
+    "name": "Modern Bamboo Blinds - Design 2",
+    "category": "Blinds",
+    "description": "Exquisite modern bamboo blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/2.jpeg"
+    ],
+    "materials": "Bamboo",
+    "colors": [
+      "Oak",
+      "Off-White"
+    ],
+    "is_featured": true,
+    "id": "local-blind-2"
+  },
+  {
+    "name": "Minimalist Faux Wood Blinds - Design 3",
+    "category": "Blinds",
+    "description": "Exquisite minimalist faux wood blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/3.jpeg"
+    ],
+    "materials": "Faux Wood",
+    "colors": [
+      "Walnut",
+      "Soft Beige"
+    ],
+    "is_featured": true,
+    "id": "local-blind-3"
+  },
+  {
+    "name": "Classic Aluminum Blinds - Design 4",
+    "category": "Blinds",
+    "description": "Exquisite classic aluminum blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/4.jpeg"
+    ],
+    "materials": "Aluminum",
+    "colors": [
+      "Off-White",
+      "Slate Gray"
+    ],
+    "is_featured": true,
+    "id": "local-blind-4"
+  },
+  {
+    "name": "Artisanal Fabric Roller Blinds - Design 5",
+    "category": "Blinds",
+    "description": "Exquisite artisanal fabric roller blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/5.jpeg"
+    ],
+    "materials": "Fabric Roller",
+    "colors": [
+      "Soft Beige",
+      "Dusty Rose"
+    ],
+    "is_featured": true,
+    "id": "local-blind-5"
+  },
+  {
+    "name": "Luxury Zebra Blinds - Design 6",
+    "category": "Blinds",
+    "description": "Exquisite luxury zebra blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/6.jpeg"
+    ],
+    "materials": "Zebra",
+    "colors": [
+      "Slate Gray",
+      "Midnight Blue"
+    ],
+    "is_featured": true,
+    "id": "local-blind-6"
+  },
+  {
+    "name": "Vintage Roman Blinds - Design 7",
+    "category": "Blinds",
+    "description": "Exquisite vintage roman blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/7.jpeg"
+    ],
+    "materials": "Roman",
+    "colors": [
+      "Dusty Rose",
+      "Charcoal"
+    ],
+    "is_featured": true,
+    "id": "local-blind-7"
+  },
+  {
+    "name": "Contemporary Venetian Blinds - Design 8",
+    "category": "Blinds",
+    "description": "Exquisite contemporary venetian blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/8.jpeg"
+    ],
+    "materials": "Venetian",
+    "colors": [
+      "Midnight Blue",
+      "Oak"
+    ],
+    "is_featured": true,
+    "id": "local-blind-8"
+  },
+  {
+    "name": "Elite Wooden Blinds - Design 9",
+    "category": "Blinds",
+    "description": "Exquisite elite wooden blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/9.jpeg"
+    ],
+    "materials": "Wooden",
+    "colors": [
+      "Charcoal",
+      "Walnut"
+    ],
+    "is_featured": false,
+    "id": "local-blind-9"
+  },
+  {
+    "name": "Bespoke Bamboo Blinds - Design 10",
+    "category": "Blinds",
+    "description": "Exquisite bespoke bamboo blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/10.jpeg"
+    ],
+    "materials": "Bamboo",
+    "colors": [
+      "Oak",
+      "Off-White"
+    ],
+    "is_featured": false,
+    "id": "local-blind-10"
+  },
+  {
+    "name": "Royal Faux Wood Blinds - Design 11",
+    "category": "Blinds",
+    "description": "Exquisite royal faux wood blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/11.jpeg"
+    ],
+    "materials": "Faux Wood",
+    "colors": [
+      "Walnut",
+      "Soft Beige"
+    ],
+    "is_featured": false,
+    "id": "local-blind-11"
+  },
+  {
+    "name": "Modern Aluminum Blinds - Design 12",
+    "category": "Blinds",
+    "description": "Exquisite modern aluminum blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/12.jpeg"
+    ],
+    "materials": "Aluminum",
+    "colors": [
+      "Off-White",
+      "Slate Gray"
+    ],
+    "is_featured": false,
+    "id": "local-blind-12"
+  },
+  {
+    "name": "Minimalist Fabric Roller Blinds - Design 13",
+    "category": "Blinds",
+    "description": "Exquisite minimalist fabric roller blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/13.jpeg"
+    ],
+    "materials": "Fabric Roller",
+    "colors": [
+      "Soft Beige",
+      "Dusty Rose"
+    ],
+    "is_featured": false,
+    "id": "local-blind-13"
+  },
+  {
+    "name": "Classic Zebra Blinds - Design 14",
+    "category": "Blinds",
+    "description": "Exquisite classic zebra blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/14.jpeg"
+    ],
+    "materials": "Zebra",
+    "colors": [
+      "Slate Gray",
+      "Midnight Blue"
+    ],
+    "is_featured": false,
+    "id": "local-blind-14"
+  },
+  {
+    "name": "Artisanal Roman Blinds - Design 15",
+    "category": "Blinds",
+    "description": "Exquisite artisanal roman blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/15.jpeg"
+    ],
+    "materials": "Roman",
+    "colors": [
+      "Dusty Rose",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-blind-15"
+  },
+  {
+    "name": "Luxury Venetian Blinds - Design 16",
+    "category": "Blinds",
+    "description": "Exquisite luxury venetian blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/16.jpeg"
+    ],
+    "materials": "Venetian",
+    "colors": [
+      "Midnight Blue",
+      "Oak"
+    ],
+    "is_featured": false,
+    "id": "local-blind-16"
+  },
+  {
+    "name": "Vintage Wooden Blinds - Design 17",
+    "category": "Blinds",
+    "description": "Exquisite vintage wooden blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/17.jpeg"
+    ],
+    "materials": "Wooden",
+    "colors": [
+      "Charcoal",
+      "Walnut"
+    ],
+    "is_featured": false,
+    "id": "local-blind-17"
+  },
+  {
+    "name": "Contemporary Bamboo Blinds - Design 18",
+    "category": "Blinds",
+    "description": "Exquisite contemporary bamboo blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/18.jpeg"
+    ],
+    "materials": "Bamboo",
+    "colors": [
+      "Oak",
+      "Off-White"
+    ],
+    "is_featured": false,
+    "id": "local-blind-18"
+  },
+  {
+    "name": "Elite Faux Wood Blinds - Design 19",
+    "category": "Blinds",
+    "description": "Exquisite elite faux wood blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/19.jpeg"
+    ],
+    "materials": "Faux Wood",
+    "colors": [
+      "Walnut",
+      "Soft Beige"
+    ],
+    "is_featured": false,
+    "id": "local-blind-19"
+  },
+  {
+    "name": "Bespoke Aluminum Blinds - Design 20",
+    "category": "Blinds",
+    "description": "Exquisite bespoke aluminum blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/20.jpeg"
+    ],
+    "materials": "Aluminum",
+    "colors": [
+      "Off-White",
+      "Slate Gray"
+    ],
+    "is_featured": false,
+    "id": "local-blind-20"
+  },
+  {
+    "name": "Royal Fabric Roller Blinds - Design 21",
+    "category": "Blinds",
+    "description": "Exquisite royal fabric roller blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/21.jpeg"
+    ],
+    "materials": "Fabric Roller",
+    "colors": [
+      "Soft Beige",
+      "Dusty Rose"
+    ],
+    "is_featured": false,
+    "id": "local-blind-21"
+  },
+  {
+    "name": "Modern Zebra Blinds - Design 22",
+    "category": "Blinds",
+    "description": "Exquisite modern zebra blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/22.jpeg"
+    ],
+    "materials": "Zebra",
+    "colors": [
+      "Slate Gray",
+      "Midnight Blue"
+    ],
+    "is_featured": false,
+    "id": "local-blind-22"
+  },
+  {
+    "name": "Minimalist Roman Blinds - Design 23",
+    "category": "Blinds",
+    "description": "Exquisite minimalist roman blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/23.jpeg"
+    ],
+    "materials": "Roman",
+    "colors": [
+      "Dusty Rose",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-blind-23"
+  },
+  {
+    "name": "Classic Venetian Blinds - Design 24",
+    "category": "Blinds",
+    "description": "Exquisite classic venetian blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/24.jpeg"
+    ],
+    "materials": "Venetian",
+    "colors": [
+      "Midnight Blue",
+      "Oak"
+    ],
+    "is_featured": false,
+    "id": "local-blind-24"
+  },
+  {
+    "name": "Artisanal Wooden Blinds - Design 25",
+    "category": "Blinds",
+    "description": "Exquisite artisanal wooden blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/25.jpeg"
+    ],
+    "materials": "Wooden",
+    "colors": [
+      "Charcoal",
+      "Walnut"
+    ],
+    "is_featured": false,
+    "id": "local-blind-25"
+  },
+  {
+    "name": "Luxury Bamboo Blinds - Design 26",
+    "category": "Blinds",
+    "description": "Exquisite luxury bamboo blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/26.jpeg"
+    ],
+    "materials": "Bamboo",
+    "colors": [
+      "Oak",
+      "Off-White"
+    ],
+    "is_featured": false,
+    "id": "local-blind-26"
+  },
+  {
+    "name": "Vintage Faux Wood Blinds - Design 27",
+    "category": "Blinds",
+    "description": "Exquisite vintage faux wood blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/27.jpeg"
+    ],
+    "materials": "Faux Wood",
+    "colors": [
+      "Walnut",
+      "Soft Beige"
+    ],
+    "is_featured": false,
+    "id": "local-blind-27"
+  },
+  {
+    "name": "Contemporary Aluminum Blinds - Design 28",
+    "category": "Blinds",
+    "description": "Exquisite contemporary aluminum blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/28.jpeg"
+    ],
+    "materials": "Aluminum",
+    "colors": [
+      "Off-White",
+      "Slate Gray"
+    ],
+    "is_featured": false,
+    "id": "local-blind-28"
+  },
+  {
+    "name": "Elite Fabric Roller Blinds - Design 29",
+    "category": "Blinds",
+    "description": "Exquisite elite fabric roller blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/29.jpeg"
+    ],
+    "materials": "Fabric Roller",
+    "colors": [
+      "Soft Beige",
+      "Dusty Rose"
+    ],
+    "is_featured": false,
+    "id": "local-blind-29"
+  },
+  {
+    "name": "Bespoke Zebra Blinds - Design 30",
+    "category": "Blinds",
+    "description": "Exquisite bespoke zebra blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/30.jpeg"
+    ],
+    "materials": "Zebra",
+    "colors": [
+      "Slate Gray",
+      "Midnight Blue"
+    ],
+    "is_featured": false,
+    "id": "local-blind-30"
+  },
+  {
+    "name": "Royal Roman Blinds - Design 31",
+    "category": "Blinds",
+    "description": "Exquisite royal roman blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/31.jpeg"
+    ],
+    "materials": "Roman",
+    "colors": [
+      "Dusty Rose",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-blind-31"
+  },
+  {
+    "name": "Modern Venetian Blinds - Design 32",
+    "category": "Blinds",
+    "description": "Exquisite modern venetian blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/32.jpeg"
+    ],
+    "materials": "Venetian",
+    "colors": [
+      "Midnight Blue",
+      "Oak"
+    ],
+    "is_featured": false,
+    "id": "local-blind-32"
+  },
+  {
+    "name": "Minimalist Wooden Blinds - Design 33",
+    "category": "Blinds",
+    "description": "Exquisite minimalist wooden blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/33.jpeg"
+    ],
+    "materials": "Wooden",
+    "colors": [
+      "Charcoal",
+      "Walnut"
+    ],
+    "is_featured": false,
+    "id": "local-blind-33"
+  },
+  {
+    "name": "Classic Bamboo Blinds - Design 34",
+    "category": "Blinds",
+    "description": "Exquisite classic bamboo blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/34.jpeg"
+    ],
+    "materials": "Bamboo",
+    "colors": [
+      "Oak",
+      "Off-White"
+    ],
+    "is_featured": false,
+    "id": "local-blind-34"
+  },
+  {
+    "name": "Artisanal Faux Wood Blinds - Design 35",
+    "category": "Blinds",
+    "description": "Exquisite artisanal faux wood blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/35.jpeg"
+    ],
+    "materials": "Faux Wood",
+    "colors": [
+      "Walnut",
+      "Soft Beige"
+    ],
+    "is_featured": false,
+    "id": "local-blind-35"
+  },
+  {
+    "name": "Luxury Aluminum Blinds - Design 36",
+    "category": "Blinds",
+    "description": "Exquisite luxury aluminum blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/36.jpeg"
+    ],
+    "materials": "Aluminum",
+    "colors": [
+      "Off-White",
+      "Slate Gray"
+    ],
+    "is_featured": false,
+    "id": "local-blind-36"
+  },
+  {
+    "name": "Vintage Fabric Roller Blinds - Design 37",
+    "category": "Blinds",
+    "description": "Exquisite vintage fabric roller blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/37.jpeg"
+    ],
+    "materials": "Fabric Roller",
+    "colors": [
+      "Soft Beige",
+      "Dusty Rose"
+    ],
+    "is_featured": false,
+    "id": "local-blind-37"
+  },
+  {
+    "name": "Contemporary Zebra Blinds - Design 38",
+    "category": "Blinds",
+    "description": "Exquisite contemporary zebra blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/38.jpeg"
+    ],
+    "materials": "Zebra",
+    "colors": [
+      "Slate Gray",
+      "Midnight Blue"
+    ],
+    "is_featured": false,
+    "id": "local-blind-38"
+  },
+  {
+    "name": "Elite Roman Blinds - Design 39",
+    "category": "Blinds",
+    "description": "Exquisite elite roman blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/39.jpeg"
+    ],
+    "materials": "Roman",
+    "colors": [
+      "Dusty Rose",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-blind-39"
+  },
+  {
+    "name": "Bespoke Venetian Blinds - Design 40",
+    "category": "Blinds",
+    "description": "Exquisite bespoke venetian blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/40.jpeg"
+    ],
+    "materials": "Venetian",
+    "colors": [
+      "Midnight Blue",
+      "Oak"
+    ],
+    "is_featured": false,
+    "id": "local-blind-40"
+  },
+  {
+    "name": "Royal Wooden Blinds - Design 41",
+    "category": "Blinds",
+    "description": "Exquisite royal wooden blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/41.jpeg"
+    ],
+    "materials": "Wooden",
+    "colors": [
+      "Charcoal",
+      "Walnut"
+    ],
+    "is_featured": false,
+    "id": "local-blind-41"
+  },
+  {
+    "name": "Modern Bamboo Blinds - Design 42",
+    "category": "Blinds",
+    "description": "Exquisite modern bamboo blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/42.jpeg"
+    ],
+    "materials": "Bamboo",
+    "colors": [
+      "Oak",
+      "Off-White"
+    ],
+    "is_featured": false,
+    "id": "local-blind-42"
+  },
+  {
+    "name": "Minimalist Faux Wood Blinds - Design 43",
+    "category": "Blinds",
+    "description": "Exquisite minimalist faux wood blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/43.jpeg"
+    ],
+    "materials": "Faux Wood",
+    "colors": [
+      "Walnut",
+      "Soft Beige"
+    ],
+    "is_featured": false,
+    "id": "local-blind-43"
+  },
+  {
+    "name": "Classic Aluminum Blinds - Design 44",
+    "category": "Blinds",
+    "description": "Exquisite classic aluminum blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/44.jpeg"
+    ],
+    "materials": "Aluminum",
+    "colors": [
+      "Off-White",
+      "Slate Gray"
+    ],
+    "is_featured": false,
+    "id": "local-blind-44"
+  },
+  {
+    "name": "Artisanal Fabric Roller Blinds - Design 45",
+    "category": "Blinds",
+    "description": "Exquisite artisanal fabric roller blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/45.jpeg"
+    ],
+    "materials": "Fabric Roller",
+    "colors": [
+      "Soft Beige",
+      "Dusty Rose"
+    ],
+    "is_featured": false,
+    "id": "local-blind-45"
+  },
+  {
+    "name": "Luxury Zebra Blinds - Design 46",
+    "category": "Blinds",
+    "description": "Exquisite luxury zebra blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/46.jpeg"
+    ],
+    "materials": "Zebra",
+    "colors": [
+      "Slate Gray",
+      "Midnight Blue"
+    ],
+    "is_featured": false,
+    "id": "local-blind-46"
+  },
+  {
+    "name": "Vintage Roman Blinds - Design 47",
+    "category": "Blinds",
+    "description": "Exquisite vintage roman blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/47.jpeg"
+    ],
+    "materials": "Roman",
+    "colors": [
+      "Dusty Rose",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-blind-47"
+  },
+  {
+    "name": "Contemporary Venetian Blinds - Design 48",
+    "category": "Blinds",
+    "description": "Exquisite contemporary venetian blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/48.jpeg"
+    ],
+    "materials": "Venetian",
+    "colors": [
+      "Midnight Blue",
+      "Oak"
+    ],
+    "is_featured": false,
+    "id": "local-blind-48"
+  },
+  {
+    "name": "Elite Wooden Blinds - Design 49",
+    "category": "Blinds",
+    "description": "Exquisite elite wooden blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/49.jpeg"
+    ],
+    "materials": "Wooden",
+    "colors": [
+      "Charcoal",
+      "Walnut"
+    ],
+    "is_featured": false,
+    "id": "local-blind-49"
+  },
+  {
+    "name": "Bespoke Bamboo Blinds - Design 50",
+    "category": "Blinds",
+    "description": "Exquisite bespoke bamboo blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/50.jpeg"
+    ],
+    "materials": "Bamboo",
+    "colors": [
+      "Oak",
+      "Off-White"
+    ],
+    "is_featured": false,
+    "id": "local-blind-50"
+  },
+  {
+    "name": "Royal Faux Wood Blinds - Design 51",
+    "category": "Blinds",
+    "description": "Exquisite royal faux wood blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/51.jpeg"
+    ],
+    "materials": "Faux Wood",
+    "colors": [
+      "Walnut",
+      "Soft Beige"
+    ],
+    "is_featured": false,
+    "id": "local-blind-51"
+  },
+  {
+    "name": "Modern Aluminum Blinds - Design 52",
+    "category": "Blinds",
+    "description": "Exquisite modern aluminum blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/52.jpeg"
+    ],
+    "materials": "Aluminum",
+    "colors": [
+      "Off-White",
+      "Slate Gray"
+    ],
+    "is_featured": false,
+    "id": "local-blind-52"
+  },
+  {
+    "name": "Minimalist Fabric Roller Blinds - Design 53",
+    "category": "Blinds",
+    "description": "Exquisite minimalist fabric roller blinds. Tailored specifically for modern luxury homes in Bhimavaram. Easy operation and premium styling.",
+    "images": [
+      "/images/blinds/53.jpeg"
+    ],
+    "materials": "Fabric Roller",
+    "colors": [
+      "Soft Beige",
+      "Dusty Rose"
+    ],
+    "is_featured": false,
+    "id": "local-blind-53"
   }
 ]

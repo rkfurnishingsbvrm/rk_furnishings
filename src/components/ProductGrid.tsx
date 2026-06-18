@@ -34,11 +34,7 @@ const categoryImages = {
         '/images/premium/fabrics_1.png'
     ],
     Wallpapers: Array.from({ length: 74 }, (_, i) => `/images/wallpapers/wallpaper_${i + 1}.jpeg`),
-    Blinds: [
-        '/images/curtains.png',
-        '/images/premium/blinds_1.png',
-        '/images/curtains.png'
-    ],
+    Blinds: Array.from({ length: 53 }, (_, i) => `/images/blinds/${i + 1}.jpeg`),
     'Carpets & Rugs': [
         '/images/inspiration1.png',
         '/images/premium/carpet_1.png',
