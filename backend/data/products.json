@@ -2918,5 +2918,677 @@
     ],
     "is_featured": false,
     "id": "local-wallpaper-73"
+  },
+  {
+    "name": "Minimalist Velvet Drapes - Series 32",
+    "category": "Curtains",
+    "description": "Exquisite minimalist curtains made from premium velvet. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/32.jpeg"
+    ],
+    "materials": "Velvet",
+    "colors": [
+      "Coffee",
+      "Navy",
+      "Maroon"
+    ],
+    "is_featured": false,
+    "id": "local-seed-192"
+  },
+  {
+    "name": "Classic Jacquard Drapes - Series 33",
+    "category": "Curtains",
+    "description": "Exquisite classic curtains made from premium jacquard. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/33.jpeg"
+    ],
+    "materials": "Jacquard",
+    "colors": [
+      "Rust",
+      "Coffee",
+      "Navy"
+    ],
+    "is_featured": false,
+    "id": "local-seed-193"
+  },
+  {
+    "name": "Artisanal Velvet Drapes - Series 34",
+    "category": "Curtains",
+    "description": "Exquisite artisanal curtains made from premium velvet. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/34.jpeg"
+    ],
+    "materials": "Velvet",
+    "colors": [
+      "Navy",
+      "Gold",
+      "Cream"
+    ],
+    "is_featured": false,
+    "id": "local-seed-194"
+  },
+  {
+    "name": "Elite Damask Drapes - Series 35",
+    "category": "Curtains",
+    "description": "Exquisite elite curtains made from premium damask. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/35.jpeg"
+    ],
+    "materials": "Damask",
+    "colors": [
+      "Navy",
+      "Charcoal",
+      "Slate"
+    ],
+    "is_featured": false,
+    "id": "local-seed-195"
+  },
+  {
+    "name": "Modern Damask Drapes - Series 36",
+    "category": "Curtains",
+    "description": "Exquisite modern curtains made from premium damask. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/36.jpeg"
+    ],
+    "materials": "Damask",
+    "colors": [
+      "Slate",
+      "Maroon",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-seed-196"
+  },
+  {
+    "name": "Contemporary Linen Drapes - Series 37",
+    "category": "Curtains",
+    "description": "Exquisite contemporary curtains made from premium linen. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/37.jpeg"
+    ],
+    "materials": "Linen",
+    "colors": [
+      "Rust",
+      "Beige",
+      "Gold"
+    ],
+    "is_featured": false,
+    "id": "local-seed-197"
+  },
+  {
+    "name": "Luxury Linen Drapes - Series 38",
+    "category": "Curtains",
+    "description": "Exquisite luxury curtains made from premium linen. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/38.jpeg"
+    ],
+    "materials": "Linen",
+    "colors": [
+      "Coffee",
+      "Charcoal",
+      "Maroon"
+    ],
+    "is_featured": false,
+    "id": "local-seed-198"
+  },
+  {
+    "name": "Classic Silk Drapes - Series 39",
+    "category": "Curtains",
+    "description": "Exquisite classic curtains made from premium silk. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/39.jpeg"
+    ],
+    "materials": "Silk",
+    "colors": [
+      "Coffee",
+      "Navy",
+      "Slate"
+    ],
+    "is_featured": false,
+    "id": "local-seed-199"
+  },
+  {
+    "name": "Luxury Suede Drapes - Series 40",
+    "category": "Curtains",
+    "description": "Exquisite luxury curtains made from premium suede. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/40.jpeg"
+    ],
+    "materials": "Suede",
+    "colors": [
+      "Cream",
+      "Navy",
+      "Coffee"
+    ],
+    "is_featured": false,
+    "id": "local-seed-200"
+  },
+  {
+    "name": "Contemporary Suede Drapes - Series 41",
+    "category": "Curtains",
+    "description": "Exquisite contemporary curtains made from premium suede. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/41.jpeg"
+    ],
+    "materials": "Suede",
+    "colors": [
+      "Rust",
+      "Gold",
+      "Maroon"
+    ],
+    "is_featured": false,
+    "id": "local-seed-201"
+  },
+  {
+    "name": "Royal Jacquard Drapes - Series 42",
+    "category": "Curtains",
+    "description": "Exquisite royal curtains made from premium jacquard. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/42.jpeg"
+    ],
+    "materials": "Jacquard",
+    "colors": [
+      "Slate",
+      "Navy",
+      "Cream"
+    ],
+    "is_featured": false,
+    "id": "local-seed-202"
+  },
+  {
+    "name": "Vintage Suede Drapes - Series 43",
+    "category": "Curtains",
+    "description": "Exquisite vintage curtains made from premium suede. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/43.jpeg"
+    ],
+    "materials": "Suede",
+    "colors": [
+      "Charcoal",
+      "Slate",
+      "Maroon"
+    ],
+    "is_featured": false,
+    "id": "local-seed-203"
+  },
+  {
+    "name": "Royal Silk Drapes - Series 44",
+    "category": "Curtains",
+    "description": "Exquisite royal curtains made from premium silk. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/44.jpeg"
+    ],
+    "materials": "Silk",
+    "colors": [
+      "Charcoal",
+      "Slate",
+      "Beige"
+    ],
+    "is_featured": false,
+    "id": "local-seed-204"
+  },
+  {
+    "name": "Artisanal Suede Drapes - Series 45",
+    "category": "Curtains",
+    "description": "Exquisite artisanal curtains made from premium suede. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/45.jpeg"
+    ],
+    "materials": "Suede",
+    "colors": [
+      "Charcoal",
+      "Rust",
+      "Cream"
+    ],
+    "is_featured": false,
+    "id": "local-seed-205"
+  },
+  {
+    "name": "Minimalist Suede Drapes - Series 46",
+    "category": "Curtains",
+    "description": "Exquisite minimalist curtains made from premium suede. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/46.jpeg"
+    ],
+    "materials": "Suede",
+    "colors": [
+      "Rust",
+      "Cream",
+      "Navy"
+    ],
+    "is_featured": false,
+    "id": "local-seed-206"
+  },
+  {
+    "name": "Royal Linen Drapes - Series 47",
+    "category": "Curtains",
+    "description": "Exquisite royal curtains made from premium linen. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/47.jpeg"
+    ],
+    "materials": "Linen",
+    "colors": [
+      "Cream",
+      "Beige",
+      "Rust"
+    ],
+    "is_featured": false,
+    "id": "local-seed-207"
+  },
+  {
+    "name": "Minimalist Cotton Blend Drapes - Series 48",
+    "category": "Curtains",
+    "description": "Exquisite minimalist curtains made from premium cotton blend. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/48.jpeg"
+    ],
+    "materials": "Cotton Blend",
+    "colors": [
+      "Cream",
+      "Coffee",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-seed-208"
+  },
+  {
+    "name": "Minimalist Linen Drapes - Series 49",
+    "category": "Curtains",
+    "description": "Exquisite minimalist curtains made from premium linen. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/49.jpeg"
+    ],
+    "materials": "Linen",
+    "colors": [
+      "Charcoal",
+      "Rust",
+      "Navy"
+    ],
+    "is_featured": false,
+    "id": "local-seed-209"
+  },
+  {
+    "name": "Classic Damask Drapes - Series 50",
+    "category": "Curtains",
+    "description": "Exquisite classic curtains made from premium damask. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/50.jpeg"
+    ],
+    "materials": "Damask",
+    "colors": [
+      "Coffee",
+      "Navy",
+      "Emerald"
+    ],
+    "is_featured": false,
+    "id": "local-seed-210"
+  },
+  {
+    "name": "Luxury Velvet Drapes - Series 51",
+    "category": "Curtains",
+    "description": "Exquisite luxury curtains made from premium velvet. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/51.jpeg"
+    ],
+    "materials": "Velvet",
+    "colors": [
+      "Slate",
+      "Charcoal",
+      "Maroon"
+    ],
+    "is_featured": false,
+    "id": "local-seed-211"
+  },
+  {
+    "name": "Elite Suede Drapes - Series 52",
+    "category": "Curtains",
+    "description": "Exquisite elite curtains made from premium suede. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/52.jpeg"
+    ],
+    "materials": "Suede",
+    "colors": [
+      "Gold",
+      "Beige",
+      "Emerald"
+    ],
+    "is_featured": false,
+    "id": "local-seed-212"
+  },
+  {
+    "name": "Artisanal Damask Drapes - Series 53",
+    "category": "Curtains",
+    "description": "Exquisite artisanal curtains made from premium damask. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/53.jpeg"
+    ],
+    "materials": "Damask",
+    "colors": [
+      "Coffee",
+      "Slate",
+      "Beige"
+    ],
+    "is_featured": false,
+    "id": "local-seed-213"
+  },
+  {
+    "name": "Minimalist Jacquard Drapes - Series 54",
+    "category": "Curtains",
+    "description": "Exquisite minimalist curtains made from premium jacquard. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/54.jpeg"
+    ],
+    "materials": "Jacquard",
+    "colors": [
+      "Emerald",
+      "Navy",
+      "Cream"
+    ],
+    "is_featured": false,
+    "id": "local-seed-214"
+  },
+  {
+    "name": "Elite Damask Drapes - Series 55",
+    "category": "Curtains",
+    "description": "Exquisite elite curtains made from premium damask. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/55.jpeg"
+    ],
+    "materials": "Damask",
+    "colors": [
+      "Gold",
+      "Cream",
+      "Maroon"
+    ],
+    "is_featured": false,
+    "id": "local-seed-215"
+  },
+  {
+    "name": "Luxury Damask Drapes - Series 56",
+    "category": "Curtains",
+    "description": "Exquisite luxury curtains made from premium damask. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/56.jpeg"
+    ],
+    "materials": "Damask",
+    "colors": [
+      "Beige",
+      "Slate",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-seed-216"
+  },
+  {
+    "name": "Elite Polyester Drapes - Series 57",
+    "category": "Curtains",
+    "description": "Exquisite elite curtains made from premium polyester. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/57.jpeg"
+    ],
+    "materials": "Polyester",
+    "colors": [
+      "Cream",
+      "Navy",
+      "Rust"
+    ],
+    "is_featured": false,
+    "id": "local-seed-217"
+  },
+  {
+    "name": "Modern Polyester Drapes - Series 58",
+    "category": "Curtains",
+    "description": "Exquisite modern curtains made from premium polyester. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/58.jpeg"
+    ],
+    "materials": "Polyester",
+    "colors": [
+      "Beige",
+      "Slate",
+      "Rust"
+    ],
+    "is_featured": false,
+    "id": "local-seed-218"
+  },
+  {
+    "name": "Luxury Linen Drapes - Series 59",
+    "category": "Curtains",
+    "description": "Exquisite luxury curtains made from premium linen. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/59.jpeg"
+    ],
+    "materials": "Linen",
+    "colors": [
+      "Navy",
+      "Maroon",
+      "Slate"
+    ],
+    "is_featured": false,
+    "id": "local-seed-219"
+  },
+  {
+    "name": "Luxury Linen Drapes - Series 60",
+    "category": "Curtains",
+    "description": "Exquisite luxury curtains made from premium linen. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/60.jpeg"
+    ],
+    "materials": "Linen",
+    "colors": [
+      "Emerald",
+      "Charcoal",
+      "Beige"
+    ],
+    "is_featured": false,
+    "id": "local-seed-220"
+  },
+  {
+    "name": "Modern Polyester Drapes - Series 61",
+    "category": "Curtains",
+    "description": "Exquisite modern curtains made from premium polyester. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/61.jpeg"
+    ],
+    "materials": "Polyester",
+    "colors": [
+      "Maroon",
+      "Cream",
+      "Rust"
+    ],
+    "is_featured": false,
+    "id": "local-seed-221"
+  },
+  {
+    "name": "Contemporary Damask Drapes - Series 62",
+    "category": "Curtains",
+    "description": "Exquisite contemporary curtains made from premium damask. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/62.jpeg"
+    ],
+    "materials": "Damask",
+    "colors": [
+      "Coffee",
+      "Navy",
+      "Rust"
+    ],
+    "is_featured": false,
+    "id": "local-seed-222"
+  },
+  {
+    "name": "Minimalist Damask Drapes - Series 63",
+    "category": "Curtains",
+    "description": "Exquisite minimalist curtains made from premium damask. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/63.jpeg"
+    ],
+    "materials": "Damask",
+    "colors": [
+      "Navy",
+      "Emerald",
+      "Coffee"
+    ],
+    "is_featured": false,
+    "id": "local-seed-223"
+  },
+  {
+    "name": "Modern Polyester Drapes - Series 64",
+    "category": "Curtains",
+    "description": "Exquisite modern curtains made from premium polyester. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/64.jpeg"
+    ],
+    "materials": "Polyester",
+    "colors": [
+      "Rust",
+      "Slate",
+      "Beige"
+    ],
+    "is_featured": false,
+    "id": "local-seed-224"
+  },
+  {
+    "name": "Minimalist Polyester Drapes - Series 65",
+    "category": "Curtains",
+    "description": "Exquisite minimalist curtains made from premium polyester. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/65.jpeg"
+    ],
+    "materials": "Polyester",
+    "colors": [
+      "Cream",
+      "Emerald",
+      "Gold"
+    ],
+    "is_featured": false,
+    "id": "local-seed-225"
+  },
+  {
+    "name": "Contemporary Velvet Drapes - Series 66",
+    "category": "Curtains",
+    "description": "Exquisite contemporary curtains made from premium velvet. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/66.jpeg"
+    ],
+    "materials": "Velvet",
+    "colors": [
+      "Coffee",
+      "Maroon",
+      "Cream"
+    ],
+    "is_featured": false,
+    "id": "local-seed-226"
+  },
+  {
+    "name": "Vintage Cotton Blend Drapes - Series 67",
+    "category": "Curtains",
+    "description": "Exquisite vintage curtains made from premium cotton blend. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/67.jpeg"
+    ],
+    "materials": "Cotton Blend",
+    "colors": [
+      "Coffee",
+      "Navy",
+      "Cream"
+    ],
+    "is_featured": false,
+    "id": "local-seed-227"
+  },
+  {
+    "name": "Classic Polyester Drapes - Series 68",
+    "category": "Curtains",
+    "description": "Exquisite classic curtains made from premium polyester. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/68.jpeg"
+    ],
+    "materials": "Polyester",
+    "colors": [
+      "Cream",
+      "Emerald",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-seed-228"
+  },
+  {
+    "name": "Royal Jacquard Drapes - Series 69",
+    "category": "Curtains",
+    "description": "Exquisite royal curtains made from premium jacquard. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/69.jpeg"
+    ],
+    "materials": "Jacquard",
+    "colors": [
+      "Maroon",
+      "Rust",
+      "Navy"
+    ],
+    "is_featured": false,
+    "id": "local-seed-229"
+  },
+  {
+    "name": "Vintage Suede Drapes - Series 70",
+    "category": "Curtains",
+    "description": "Exquisite vintage curtains made from premium suede. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/70.jpeg"
+    ],
+    "materials": "Suede",
+    "colors": [
+      "Slate",
+      "Coffee",
+      "Gold"
+    ],
+    "is_featured": false,
+    "id": "local-seed-230"
+  },
+  {
+    "name": "Modern Velvet Drapes - Series 71",
+    "category": "Curtains",
+    "description": "Exquisite modern curtains made from premium velvet. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/71.jpeg"
+    ],
+    "materials": "Velvet",
+    "colors": [
+      "Coffee",
+      "Maroon",
+      "Charcoal"
+    ],
+    "is_featured": false,
+    "id": "local-seed-231"
+  },
+  {
+    "name": "Minimalist Linen Drapes - Series 72",
+    "category": "Curtains",
+    "description": "Exquisite minimalist curtains made from premium linen. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/72.jpeg"
+    ],
+    "materials": "Linen",
+    "colors": [
+      "Coffee",
+      "Cream",
+      "Maroon"
+    ],
+    "is_featured": false,
+    "id": "local-seed-232"
+  },
+  {
+    "name": "Modern Velvet Drapes - Series 73",
+    "category": "Curtains",
+    "description": "Exquisite modern curtains made from premium velvet. Tailored specifically for high-end interiors in Bhimavaram. Part of our new curtain collection.",
+    "images": [
+      "/images/curtains/73.jpeg"
+    ],
+    "materials": "Velvet",
+    "colors": [
+      "Rust",
+      "Charcoal",
+      "Emerald"
+    ],
+    "is_featured": false,
+    "id": "local-seed-233"
   }
 ]
