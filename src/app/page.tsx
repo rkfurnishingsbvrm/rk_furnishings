@@ -101,12 +101,12 @@ export default function Home() {
                     </div>
                   </div>
                 ) : (
-                  <button
-                    onClick={() => toggleAuth(true)}
+                  <a
+                    href="#collections"
                     className="bg-charcoal text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-wider hover:bg-gold transition-all shadow-xl shadow-black/5"
                   >
-                    Member Login
-                  </button>
+                    Catalogue
+                  </a>
                 ))}
               </div>
             </div>
