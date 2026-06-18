@@ -81,10 +81,8 @@ export default function Home() {
                 <Sparkles className="w-3 h-3" /> AI Showroom
               </Link>
 
-              <div className="flex items-center gap-8 pl-8 border-l border-gray-100">
-
-
-                {mounted && (user ? (
+              {mounted && user && (
+                <div className="flex items-center gap-8 pl-8 border-l border-gray-100">
                   <div className="flex items-center gap-4 group relative">
                     <div className="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center text-gold font-serif text-sm border-2 border-gold/20 shadow-lg cursor-pointer">
                       {user.name[0]}
@@ -100,15 +98,8 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                ) : (
-                  <a
-                    href="#collections"
-                    className="bg-charcoal text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-wider hover:bg-gold transition-all shadow-xl shadow-black/5"
-                  >
-                    Catalogue
-                  </a>
-                ))}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
