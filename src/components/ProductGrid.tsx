@@ -188,13 +188,7 @@ const ProductGrid = () => {
                                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                 />
                                 
-                                {/* AR Quick Access Badge */}
-                                <div className="absolute bottom-4 right-4 z-10 flex gap-2 translate-y-12 group-hover:translate-y-0 transition-transform duration-500">
-                                     <div className="bg-charcoal/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 flex items-center gap-2 shadow-xl">
-                                         <Sparkles className="w-3 h-3 text-gold" />
-                                         <span className="text-[7px] font-black uppercase tracking-widest text-white">AI READY // AR</span>
-                                     </div>
-                                </div>
+
                                 
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
                             </div>
@@ -211,24 +205,6 @@ const ProductGrid = () => {
                                             className="px-2 py-0.5 bg-gold/10 text-gold text-[7px] font-black rounded-full border border-gold/20 uppercase hover:bg-gold hover:text-white transition-all transform hover:scale-110"
                                         >
                                             AI READY
-                                        </button>
-                                        <a 
-                                            href="/smart-showroom#ar-catalog" 
-                                            onClick={(e) => e.stopPropagation()}
-                                            className="px-2 py-0.5 bg-black/5 text-charcoal/50 text-[7px] font-black rounded-full border border-black/5 uppercase hover:bg-black hover:text-white transition-all transform hover:scale-110"
-                                        >
-                                            AR
-                                        </a>
-                                        <button 
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                window.location.href = '#showroom';
-                                                // We can trigger the game mode here if possible, 
-                                                // but for now, scroll to showroom
-                                            }}
-                                            className="px-2 py-0.5 bg-gold/5 text-gold/40 text-[7px] font-black rounded-full border border-gold/10 uppercase hover:bg-gold hover:text-white transition-all transform hover:scale-110"
-                                        >
-                                            VR
                                         </button>
                                     </div>
                                 </div>
@@ -307,23 +283,6 @@ const ProductGrid = () => {
                                 </div>
 
                                 <div className="flex flex-col gap-3">
-
-                                    
-                                    <div className="grid grid-cols-2 gap-3">
-                                         <a 
-                                            href={`/smart-showroom#ar-catalog`} 
-                                            className="text-center py-4 border border-charcoal/10 text-[9px] font-black uppercase tracking-[0.3em] hover:bg-gray-50 flex items-center justify-center gap-2 transition-all hover:border-gold group"
-                                        >
-                                            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse group-hover:scale-150 transition-transform" />
-                                            Live AR Placement
-                                        </a>
-                                        <button 
-                                            onClick={() => window.location.href = '#showroom'}
-                                            className="text-center py-4 border border-charcoal/10 text-charcoal text-[9px] font-black uppercase tracking-[0.3em] hover:bg-gold hover:text-white flex items-center justify-center gap-2 transition-all shadow-sm"
-                                        >
-                                            VR View
-                                        </button>
-                                    </div>
                                     <a
                                         href="#booking"
                                         onClick={() => setSelectedProduct(null)}
