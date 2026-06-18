@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
-import fs from 'fs';
-import path from 'path';
+import localData from '../../../../backend/data/products.json';
 
 export async function GET(request: Request) {
     try {
@@ -13,28 +12,27 @@ export async function GET(request: Request) {
 
         const { data: cloudData, error } = await query;
 
-        // Fallback or Merge with local data
-        let localData = [];
-        try {
-            const filePath = path.join(process.cwd(), 'backend/data/products.json');
-            if (fs.existsSync(filePath)) {
-                localData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        let finalData: any[] = [];
+
+        if (error || !cloudData || cloudData.length === 0) {
+            // Full fallback to local data when Supabase is down or empty
+            finalData = [...localData];
+            if (category) {
+                finalData = finalData.filter(p => p.category === category);
             }
-        } catch (e) {
-            console.error("Local data read error:", e);
-        }
+        } else {
+            // Merge logic when Supabase is active
+            finalData = [...cloudData];
+            
+            const hasCurtains = finalData.some(p => p.category === 'Curtains');
+            if (!hasCurtains) {
+                finalData = [...finalData, ...localData.filter(p => p.category === 'Curtains')];
+            }
 
-        let finalData = cloudData || [];
-
-        // Merge logic
-        const hasCurtains = finalData.some(p => p.category === 'Curtains');
-        if (!hasCurtains) {
-            finalData = [...finalData, ...localData.filter(p => p.category === 'Curtains')];
-        }
-
-        const hasEJoy = finalData.some(p => p.name?.includes('E-Joy'));
-        if (!hasEJoy) {
-            finalData = [...finalData, ...localData.filter(p => p.category === 'Wallpapers' && p.name?.includes('E-Joy'))];
+            const hasEJoy = finalData.some(p => p.name?.includes('E-Joy'));
+            if (!hasEJoy) {
+                finalData = [...finalData, ...localData.filter(p => p.category === 'Wallpapers' && p.name?.includes('E-Joy'))];
+            }
         }
 
         return NextResponse.json(finalData, { status: 200 });
