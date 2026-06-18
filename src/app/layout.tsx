@@ -3,7 +3,6 @@ import { Playfair_Display, Montserrat } from 'next/font/google';
 import './globals.css';
 import CustomCursor from '@/components/CustomCursor';
 import GlobalOverlay from '@/components/GlobalOverlay';
-import Script from 'next/script';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -28,14 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="cursor-none" suppressHydrationWarning>
-      <head>
-        <Script 
-          src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js" 
-          type="module" 
-          strategy="afterInteractive" 
-        />
-      </head>
-
       <body
         className={`${playfair.variable} ${montserrat.variable} font-sans antialiased bg-[#FFFFFF] text-[#2C2C2C] overflow-x-hidden cursor-none`}
         suppressHydrationWarning

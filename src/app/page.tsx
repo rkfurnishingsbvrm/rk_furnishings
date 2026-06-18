@@ -8,18 +8,16 @@ import ConsultationForm from '@/components/ConsultationForm';
 import ProductGrid from '@/components/ProductGrid';
 import InspirationGallery from '@/components/InspirationGallery';
 import Testimonials from '@/components/Testimonials';
-import { ShowroomScene } from '@/components/Showroom/ShowroomScene';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import LocationSection from '@/components/LocationSection';
 import ServicesSection from '@/components/ServicesSection';
 import BlogSection from '@/components/BlogSection';
-import { ArrowDown, Instagram, Facebook, Phone, Mail, Play, Pause, ShoppingCart, User as UserIcon, LogOut, Sparkles } from 'lucide-react';
+import { ArrowDown, Instagram, Facebook, Phone, Mail, ShoppingCart, User as UserIcon, LogOut, Sparkles } from 'lucide-react';
 import { useUIStore, useAuthStore } from '@/store/useStore';
 import { API_BASE_URL } from "@/lib/config";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const [showGame, setShowGame] = useState(false);
   const { toggleAuth } = useUIStore();
   const { user, logout } = useAuthStore();
 
@@ -70,7 +68,7 @@ export default function Home() {
             </div>
 
             <div className="hidden lg:flex space-x-12 items-center">
-              {['About', 'Showroom', 'Collections', 'Services', 'Visit Us'].map((item) => (
+              {['About', 'Collections', 'Services', 'Visit Us'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
@@ -116,73 +114,47 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero / Showroom Section */}
-      <section id="showroom" className="relative h-screen w-full bg-black overflow-hidden flex flex-col pt-20">
-        {!showGame ? (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              className="max-w-4xl"
-            >
-              <div className="inline-block px-4 py-1 mb-6 border border-gold/50 rounded-full text-gold text-xs font-bold tracking-widest uppercase bg-gold/5">
-                The Interior Metaverse
-              </div>
-              <h1 className="text-5xl md:text-8xl font-serif text-white mb-8 leading-tight">
-                Step Inside Your <br />
-                <span className="text-gold italic">Dream Home</span>
-              </h1>
-              <p className="text-white/70 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                Experience our premium collections in a fully immersive 3D environment.
-                Walk, interact, and feel the textures of luxury.
-              </p>
-              <button
-                onClick={() => setShowGame(true)}
-                className="group relative px-12 py-6 bg-gold text-white font-bold text-lg uppercase tracking-widest overflow-hidden transition-all hover:pr-16 flex items-center gap-3 mx-auto shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_50px_rgba(212,175,55,0.5)]"
-              >
-                <Play className="fill-white w-5 h-5 group-hover:scale-110 transition-transform" />
-                Enter 3D Showroom
-                <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0">→</span>
-              </button>
-            </motion.div>
-            <div className="mt-16 flex gap-12 text-white/40 text-xs font-mono tracking-widest">
-              <div className="flex flex-col gap-1 items-center"><span>[W][A][S][D]</span><span>MOVE</span></div>
-              <div className="flex flex-col gap-1 items-center"><span>[MOUSE]</span><span>LOOK</span></div>
-              <div className="flex flex-col gap-1 items-center"><span>[E]</span><span>INTERACT</span></div>
+      {/* Hero Section */}
+      <section id="hero" className="relative h-screen w-full bg-black overflow-hidden flex flex-col pt-20">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="max-w-4xl"
+          >
+            <div className="inline-block px-4 py-1 mb-6 border border-gold/50 rounded-full text-gold text-xs font-bold tracking-widest uppercase bg-gold/5">
+              Bespoke Furnishing Atelier
             </div>
-          </div>
-        ) : (
-          <div className="flex-1 w-full relative cursor-none min-h-0">
-            <ShowroomScene />
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowGame(false);
-              }}
-              className="absolute top-24 right-8 z-[60] bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-full border border-white/20 backdrop-blur-md flex items-center gap-2 group transition-all"
+            <h1 className="text-5xl md:text-8xl font-serif text-white mb-8 leading-tight">
+              Experience <br />
+              <span className="text-gold italic">Luxury Living</span>
+            </h1>
+            <p className="text-white/70 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+              Discover our curated collection of custom curtains, fine sofa fabrics, and elegant wall styling solutions. Handcrafted by artisans for a timeless home transformation.
+            </p>
+            <a
+              href="#collections"
+              className="inline-block group relative px-12 py-6 bg-gold text-white font-bold text-lg uppercase tracking-widest overflow-hidden transition-all hover:pr-16 shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_50px_rgba(212,175,55,0.5)]"
             >
-              <Pause className="w-4 h-4 fill-white" />
-              Exit 3D View
-            </button>
-          </div>
-        )}
+              Explore Collections
+              <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0">→</span>
+            </a>
+          </motion.div>
+        </div>
 
         {/* Background Overlay */}
-        {!showGame && (
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/premium/interior_1.png"
-              alt="Background"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover opacity-50 contrast-125"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black/80" />
-          </div>
-        )}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/premium/interior_1.png"
+            alt="Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-50 contrast-125"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black/80" />
+        </div>
       </section>
 
       {/* About Section */}
@@ -324,8 +296,8 @@ export default function Home() {
               <h4 className="text-white font-bold mb-8 uppercase tracking-[0.3em] text-xs">Navigation</h4>
               <ul className="space-y-5 text-sm uppercase tracking-widest font-medium">
                 <li><a href="#about" className="hover:text-gold transition-colors">The Atelier</a></li>
-                <li><a href="#showroom" className="hover:text-gold transition-colors">Metaverse View</a></li>
-                <li><a href="#collections" className="hover:text-gold transition-colors">Curated Catalog</a></li>
+                <li><a href="#collections" className="hover:text-gold transition-colors">Our Collections</a></li>
+                <li><a href="#services" className="hover:text-gold transition-colors">Services</a></li>
                 <li><a href="#visit-us" className="hover:text-gold transition-colors">Flagship Store</a></li>
               </ul>
             </div>

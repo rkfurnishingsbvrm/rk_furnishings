@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as fabric from 'fabric';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-import { Move, Layers, RefreshCcw, Download, Sparkles, Wand2, Loader2, AlertCircle, Camera } from 'lucide-react';
+import { Move, Layers, RefreshCcw, Download, Sparkles, Wand2, Loader2, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const WALLPAPER_LIST = [
@@ -214,11 +214,6 @@ const RoomVisualizer: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="pt-8 border-t border-gray-100 flex flex-col gap-4">
-                   <button className="w-full bg-gold text-white py-4 rounded-xl text-[10px] font-black uppercase tracking-widest shadow-xl flex items-center justify-center gap-3">
-                      Start AR Mode <Camera className="w-4 h-4" />
-                   </button>
-                </div>
              </div>
           </div>
 
